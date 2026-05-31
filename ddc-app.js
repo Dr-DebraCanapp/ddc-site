@@ -250,7 +250,12 @@ function Footer() {
     }
   }, "Referral portal \xB7 sign in \u2192"))))), /*#__PURE__*/React.createElement("div", {
     className: "footer-bottom"
-  }, /*#__PURE__*/React.createElement("div", null, "\xA9 ", new Date().getFullYear(), " Dr. Debra A. Canapp"), /*#__PURE__*/React.createElement("div", null, "DVM \xB7 CCRT \xB7 CVA \xB7 Diplomate, ACVSMR"))));
+  }, /*#__PURE__*/React.createElement("div", null, "\xA9 ", new Date().getFullYear(), " Dr. Debra A. Canapp"), /*#__PURE__*/React.createElement("div", null, "DVM \xB7 CCRT \xB7 CVA \xB7 Diplomate, ACVSMR"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("a", {
+    href: "/reviewer",
+    style: {
+      color: 'rgba(244,239,229,0.45)'
+    }
+  }, "Reviewer access")))));
 }
 
 /* ========== Section head helper ========== */
@@ -6556,6 +6561,140 @@ function ApplyBlock() {
   }, l)))))), /*#__PURE__*/React.createElement("style", null, `@media (max-width:1000px){ .apply-grid { grid-template-columns: 1fr !important; gap: 48px !important; } }`)));
 }
 window.__ROUTES=window.__ROUTES||{};window.__ROUTES['/network']=NetworkPage;
+})();
+(function(){
+/* global React, ReactDOM */
+function PortalComingSoon() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(window.Nav, {
+    current: "portal"
+  }), /*#__PURE__*/React.createElement("section", {
+    className: "section-pad",
+    style: {
+      minHeight: '60vh',
+      display: 'flex',
+      alignItems: 'center'
+    },
+    "data-screen-label": "Portal \u2014 Coming Soon"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "container",
+    style: {
+      textAlign: 'center',
+      maxWidth: 760,
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow",
+    style: {
+      color: 'var(--clay)'
+    }
+  }, "Referral Portal"), /*#__PURE__*/React.createElement("h1", {
+    className: "h-display",
+    style: {
+      marginTop: 24,
+      fontSize: 'clamp(52px,8vw,104px)'
+    }
+  }, "Coming", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontStyle: 'italic',
+      fontWeight: 300,
+      color: 'var(--ink-2)'
+    }
+  }, "soon")), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginTop: 28,
+      maxWidth: 560,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      textWrap: 'pretty'
+    }
+  }, "The secure referral portal \u2014 online case submission and diagnostic image review for referring veterinarians \u2014 is in active development. In the meantime, reach out directly and we'll get your case moving."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 40,
+      display: 'flex',
+      gap: 14,
+      justifyContent: 'center',
+      flexWrap: 'wrap'
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "mailto:info@drdebracanapp.com",
+    className: "btn btn-clay"
+  }, "Email a referral ", /*#__PURE__*/React.createElement("span", {
+    className: "arrow"
+  }, "\u2192")), /*#__PURE__*/React.createElement("a", {
+    href: "/services",
+    className: "btn btn-ghost"
+  }, "Services & referrals")))), /*#__PURE__*/React.createElement(window.Footer, null));
+}
+window.__ROUTES=window.__ROUTES||{};window.__ROUTES['/portal']=PortalComingSoon;
+})();
+(function(){
+/* global React, ReactDOM */
+function ReviewerComingSoon() {
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(window.Nav, {
+    current: "reviewer"
+  }), /*#__PURE__*/React.createElement("section", {
+    className: "section-pad",
+    style: {
+      minHeight: '60vh',
+      display: 'flex',
+      alignItems: 'center'
+    },
+    "data-screen-label": "Reviewer \u2014 Coming Soon"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "container",
+    style: {
+      textAlign: 'center',
+      maxWidth: 760,
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "eyebrow",
+    style: {
+      color: 'var(--clay)'
+    }
+  }, "Image Reviewer"), /*#__PURE__*/React.createElement("h1", {
+    className: "h-display",
+    style: {
+      marginTop: 24,
+      fontSize: 'clamp(52px,8vw,104px)'
+    }
+  }, "Coming", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontStyle: 'italic',
+      fontWeight: 300,
+      color: 'var(--ink-2)'
+    }
+  }, "soon")), /*#__PURE__*/React.createElement("p", {
+    className: "lede",
+    style: {
+      marginTop: 28,
+      maxWidth: 560,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      textWrap: 'pretty'
+    }
+  }, "The diagnostic image reviewer \u2014 the DICOM reading workspace for remote second-opinion reads \u2014 is in active development. For urgent reads in the meantime, reach out directly."), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 40,
+      display: 'flex',
+      gap: 14,
+      justifyContent: 'center',
+      flexWrap: 'wrap'
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "mailto:info@drdebracanapp.com",
+    className: "btn btn-clay"
+  }, "Contact for a read ", /*#__PURE__*/React.createElement("span", {
+    className: "arrow"
+  }, "\u2192")), /*#__PURE__*/React.createElement("a", {
+    href: "/services",
+    className: "btn btn-ghost"
+  }, "Remote reads & services")))), /*#__PURE__*/React.createElement(window.Footer, null));
+}
+window.__ROUTES=window.__ROUTES||{};window.__ROUTES['/reviewer']=ReviewerComingSoon;
 })();
   (function go(){ if(!(window.React&&window.ReactDOM&&document.body)){return setTimeout(go,20);} var root=document.getElementById('root'); if(!root){root=document.createElement('div');root.id='root';document.body.insertBefore(root,document.body.firstChild);} var p=location.pathname.replace(/\/+$/,'')||'/'; var C=(window.__ROUTES||{})[p]||(window.__ROUTES||{})['/']; if(C){ReactDOM.createRoot(root).render(React.createElement(C));} })();
 })();
