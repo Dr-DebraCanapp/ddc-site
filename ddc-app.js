@@ -1,8 +1,10 @@
 /* Dr. Debra Canapp — full site bundle (auto-generated) */
 (function(){
-  var __css="/* ============================================================\n   Dr. Debra Canapp — Editorial system\n   Two fonts only: Cormorant Garamond (display) + Inter (everything else)\n   Earthy + boutique. Calm. Less.\n   ============================================================ */\n\n:root {\n  /* Surfaces */\n  --paper: #F4EFE5;\n  --cream: #FBF8F1;\n  --paper-deep: #E8E1D2;\n\n  /* Inks */\n  --ink: #18211C;\n  --ink-2: #2D3A2F;\n  --ink-3: #5C6759;\n  --ink-4: #8B9482;\n\n  /* Tonal */\n  --forest: #1F2A22;\n  --sage: #7C8A6C;\n  --tan: #C2A878;\n  --clay: #B16A48;\n  --clay-deep: #8C4F33;\n\n  /* Rules */\n  --rule: rgba(24,33,28,0.12);\n  --rule-2: rgba(24,33,28,0.24);\n\n  /* Type — JUST TWO */\n  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;\n  --sans:  'Inter', -apple-system, system-ui, sans-serif;\n\n  --maxw: 1360px;\n  --pad: 64px;\n}\n\n@media (max-width: 900px) { :root { --pad: 24px; } }\n\n* , *::before, *::after { box-sizing: border-box; }\nhtml, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }\nbody { font-size: 16px; line-height: 1.6; overflow-x: clip; }\nimg { display: block; max-width: 100%; }\na { color: inherit; text-decoration: none; }\nbutton { font-family: inherit; cursor: pointer; border: none; background: none; padding: 0; color: inherit; }\nh1, h2, h3, h4, h5 { margin: 0; font-weight: 400; }\np { margin: 0; }\nul, ol { margin: 0; padding: 0; list-style: none; }\n::selection { background: var(--ink); color: var(--paper); }\n\n/* ============= Reusable ============= */\n.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); width: 100%; }\n\n.eyebrow {\n  font-family: var(--sans);\n  font-size: 11px;\n  letter-spacing: 0.22em;\n  text-transform: uppercase;\n  color: var(--ink-3);\n  font-weight: 500;\n}\n\n.serif { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; }\n.serif-it { font-family: var(--serif); font-style: italic; font-weight: 400; }\n\n.h-display { font-family: var(--serif); font-size: clamp(56px, 8vw, 128px); line-height: 0.96; letter-spacing: -0.02em; font-weight: 400; }\n.h-section { font-family: var(--serif); font-size: clamp(40px, 5vw, 76px); line-height: 1.02; letter-spacing: -0.015em; font-weight: 400; }\n.h-block   { font-family: var(--serif); font-size: clamp(26px, 2.8vw, 40px); line-height: 1.08; letter-spacing: -0.012em; font-weight: 400; }\n\n.lede { font-family: var(--serif); font-size: clamp(19px, 1.4vw, 24px); line-height: 1.5; color: var(--ink-2); font-weight: 400; }\n.body { font-size: 16px; line-height: 1.7; color: var(--ink-2); }\n.body-lg { font-size: 18px; line-height: 1.65; color: var(--ink-2); }\n.small { font-size: 14px; line-height: 1.5; color: var(--ink-3); }\n\n/* ============= Logo sticker ============= */\n.logo-sticker {\n  position: relative;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 76px;\n  height: 76px;\n  border-radius: 50%;\n  background: var(--ink);\n  padding: 10px;\n  box-shadow: 0 6px 18px -8px rgba(24,33,28,0.4);\n  transform: rotate(-6deg);\n  transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.4s;\n  overflow: hidden;\n}\n.logo-sticker::before {\n  content: '';\n  position: absolute;\n  inset: 6px;\n  border-radius: 50%;\n  border: 1px dashed rgba(244,239,229,0.32);\n  pointer-events: none;\n}\n.logo-sticker:hover { transform: rotate(2deg) scale(1.04); box-shadow: 0 10px 24px -6px rgba(24,33,28,0.5); }\n.logo-sticker img {\n  width: 100%; height: 100%;\n  object-fit: contain;\n  filter: invert(1) brightness(1.3);\n}\n\n/* Lighter sticker variant */\n.logo-sticker.bone { background: var(--paper); }\n.logo-sticker.bone::before { border-color: rgba(24,33,28,0.3); }\n.logo-sticker.bone img { filter: none; }\n\n.logo-sticker.clay { background: var(--clay); }\n.logo-sticker.clay::before { border-color: rgba(244,239,229,0.4); }\n\n/* Footer big sticker */\n.logo-sticker.lg { width: 120px; height: 120px; padding: 16px; }\n\n/* ============= Nav ============= */\n.nav-bar {\n  position: sticky; top: 0; z-index: 50;\n  background: rgba(244,239,229,0.92);\n  backdrop-filter: blur(10px);\n  -webkit-backdrop-filter: blur(10px);\n  border-bottom: 1px solid var(--rule);\n}\n.nav-inner {\n  display: flex;\n  align-items: center;\n  gap: 40px;\n  height: 84px;\n}\n.nav-brand {\n  display: flex; align-items: center; gap: 14px;\n  flex: 0 0 auto;\n  position: relative;\n  z-index: 2;\n}\n.nav-logo {\n  height: 50px;\n  width: auto;\n  display: block;\n  transform-origin: left top;\n  transition: transform 460ms cubic-bezier(0.22, 1, 0.36, 1),\n              filter 460ms ease;\n  will-change: transform;\n}\n.nav-brand > span:nth-child(2) {\n  transition: opacity 220ms ease, transform 460ms cubic-bezier(0.22, 1, 0.36, 1);\n}\n.nav-brand:hover .nav-logo,\n.nav-brand:focus-visible .nav-logo {\n  transform: translateY(2px) scale(2.1);\n  filter: drop-shadow(0 14px 26px rgba(24, 33, 28, 0.22));\n}\n.nav-brand:hover > span:nth-child(2),\n.nav-brand:focus-visible > span:nth-child(2) {\n  opacity: 0;\n  transform: translateX(-6px);\n  pointer-events: none;\n}\n@media (max-width: 700px) {\n  .nav-logo { height: 44px; }\n}\n.nav-brand .nav-name {\n  font-family: var(--serif);\n  font-size: 19px;\n  letter-spacing: -0.01em;\n  color: var(--ink);\n  line-height: 1.1;\n  white-space: nowrap;\n}\n.nav-brand .nav-sub {\n  font-size: 9.5px;\n  letter-spacing: 0.18em;\n  text-transform: uppercase;\n  color: var(--ink-3);\n  margin-top: 4px;\n  font-weight: 500;\n  white-space: nowrap;\n}\n@media (max-width: 1180px) {\n  .nav-brand > span:nth-child(2) { display: none; }\n}\n@media (max-width: 700px) {\n  .nav-logo { height: 40px; }\n}\n.nav-links {\n  display: flex;\n  gap: 26px;\n  flex: 1 1 auto;\n  justify-content: flex-start;\n}\n.nav-links a {\n  font-size: 13px;\n  letter-spacing: 0;\n  color: var(--ink-2);\n  padding: 8px 0;\n  transition: color 0.2s;\n  white-space: nowrap;\n}\n.nav-right {\n  margin-left: auto;\n  display: flex; align-items: center; gap: 14px;\n}\n.nav-portal {\n  font-family: var(--mono, ui-monospace, \"JetBrains Mono\", monospace);\n  font-size: 11px;\n  letter-spacing: 0.14em;\n  text-transform: uppercase;\n  color: var(--ink-2);\n  display: inline-flex;\n  align-items: center;\n  white-space: nowrap;\n  text-decoration: none;\n  padding: 6px 2px;\n  border-bottom: 1px solid transparent;\n  transition: color 0.2s ease, border-color 0.2s ease;\n}\n.nav-portal:hover { color: var(--clay); border-bottom-color: var(--clay); }\n.nav-divider {\n  width: 1px;\n  height: 18px;\n  background: var(--rule-2, rgba(31,31,31,0.18));\n  display: inline-block;\n}\n/* Hamburger toggle — hidden on desktop */\n.nav-toggle {\n  display: none;\n  flex-direction: column;\n  justify-content: center;\n  gap: 5px;\n  width: 44px;\n  height: 44px;\n  margin-left: auto;\n  padding: 0;\n  border: none;\n  background: none;\n  cursor: pointer;\n  z-index: 60;\n}\n.nav-toggle span {\n  display: block;\n  width: 24px;\n  height: 2px;\n  margin: 0 auto;\n  background: var(--ink);\n  transition: transform 0.3s cubic-bezier(0.2,0.7,0.2,1), opacity 0.2s ease;\n}\n.nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }\n.nav-toggle.is-open span:nth-child(2) { opacity: 0; }\n.nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }\n/* Mobile menu panel */\n.nav-mobile {\n  display: none;\n  position: fixed;\n  top: 68px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: calc(100dvh - 68px);\n  background: var(--paper);\n  border-top: 1px solid var(--rule);\n  padding: clamp(12px,2.5vh,30px) var(--pad) max(clamp(16px,3vh,32px), env(safe-area-inset-bottom));\n  flex-direction: column;\n  justify-content: space-between;\n  opacity: 0;\n  transform: translateY(-8px);\n  pointer-events: none;\n  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.2,0.7,0.2,1);\n  overflow-y: auto;\n  z-index: 55;\n}\n.nav-mobile.is-open { opacity: 1; transform: translateY(0); pointer-events: auto; }\n.nav-mobile-links { display: flex; flex-direction: column; }\n.nav-mobile-links a {\n  font-family: var(--serif);\n  font-size: clamp(18px,4.2vh,26px);\n  line-height: 1.12;\n  letter-spacing: -0.01em;\n  color: var(--ink);\n  padding: clamp(6px,1.3vh,14px) 0;\n  border-bottom: 1px solid var(--rule);\n}\n.nav-mobile-links a.active { color: var(--clay); }\n.nav-mobile-foot {\n  margin-top: clamp(14px,2.5vh,28px);\n  display: flex;\n  flex-direction: column;\n  gap: clamp(10px,2vh,18px);\n  align-items: flex-start;\n}\n.nav-mobile-portal {\n  display: inline-flex;\n  align-items: center;\n  font-family: var(--mono, ui-monospace, \"JetBrains Mono\", monospace);\n  font-size: 13px;\n  letter-spacing: 0.14em;\n  text-transform: uppercase;\n  color: var(--ink-2);\n}\n@media (max-width: 980px) {\n  .nav-portal { display: none; }\n  .nav-divider { display: none; }\n}\n@media (max-width: 1240px) {\n  .nav-links { gap: 18px; }\n  .nav-links a { font-size: 12.5px; }\n}\n@media (max-width: 1080px) {\n  .nav-links { gap: 14px; }\n  .nav-links a { font-size: 12px; }\n}\n@media (max-width: 980px) {\n  .nav-links { display: none; }\n  .nav-inner { height: 68px; gap: 20px; }\n  .nav-right { display: none; }\n  .nav-toggle { display: flex; }\n  .nav-mobile { display: flex; }\n}\n\n/* ============= Buttons ============= */\n.btn {\n  display: inline-flex;\n  align-items: center;\n  gap: 10px;\n  padding: 14px 22px;\n  font-family: var(--sans);\n  font-size: 13px;\n  letter-spacing: 0.04em;\n  font-weight: 500;\n  border: 1px solid var(--ink);\n  background: var(--ink);\n  color: var(--paper);\n  transition: background 0.2s, color 0.2s, border-color 0.2s;\n  cursor: pointer;\n}\n.btn:hover { background: var(--forest); }\n.btn .arrow { font-family: var(--serif); font-size: 18px; line-height: 1; transform: translateY(-1px); }\n.btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }\n.btn-ghost:hover { background: var(--ink); color: var(--paper); }\n.btn-clay { background: var(--clay); border-color: var(--clay); color: var(--paper); }\n.btn-clay:hover { background: var(--clay-deep); border-color: var(--clay-deep); }\n.btn-sm { padding: 10px 16px; font-size: 12px; }\n\n.link-arrow {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  font-size: 13px;\n  letter-spacing: 0.04em;\n  font-weight: 500;\n  color: var(--ink);\n  border-bottom: 1px solid var(--rule-2);\n  padding-bottom: 4px;\n  transition: color 0.2s, border-color 0.2s;\n}\n.link-arrow:hover { color: var(--clay); border-bottom-color: var(--clay); }\n.link-arrow .arrow { font-family: var(--serif); font-size: 16px; transition: transform 0.2s; }\n.link-arrow:hover .arrow { transform: translateX(3px); }\n\n/* ============= Section scaffolding ============= */\nsection { position: relative; }\n.section-pad { padding: clamp(80px, 9vw, 144px) 0; }\n\n.section-head {\n  display: grid;\n  grid-template-columns: 180px 1fr;\n  gap: 48px;\n  margin-bottom: 72px;\n  align-items: start;\n}\n.section-head .label { padding-top: 14px; }\n@media (max-width: 800px) {\n  .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 40px; }\n}\n\n/* ============= Hero ============= */\n.hero {\n  background: var(--paper);\n  overflow: hidden;\n}\n.hero-grid {\n  display: grid;\n  grid-template-columns: 1.1fr 0.9fr;\n  align-items: stretch;\n  min-height: 78vh;\n}\n@media (max-width: 1000px) { .hero-grid { grid-template-columns: 1fr; min-height: auto; } }\n\n.hero-left {\n  padding: clamp(56px, 8vw, 120px) clamp(48px, 5vw, 80px) clamp(56px, 8vw, 120px) 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 40px;\n}\n@media (max-width: 1000px) { .hero-left { padding-right: 0; padding-bottom: 48px; } }\n\n.hero-right {\n  position: relative;\n  background: var(--paper-deep);\n}\n.hero-portrait {\n  width: 100%;\n  height: 100%;\n  min-height: 480px;\n  object-fit: cover;\n  object-position: center 25%;\n}\n\n/* ============= Anatomy strip ============= */\n.region-list {\n  display: grid;\n  grid-template-columns: repeat(6, 1fr);\n  border-top: 1px solid var(--ink);\n  border-bottom: 1px solid var(--ink);\n}\n@media (max-width: 900px) { .region-list { grid-template-columns: repeat(2, 1fr); } }\n.region-list .reg {\n  padding: 32px 24px 36px;\n  border-right: 1px solid var(--rule);\n  cursor: pointer;\n  transition: background 0.25s, color 0.25s;\n  display: flex;\n  flex-direction: column;\n}\n.region-list .reg:last-child { border-right: none; }\n.region-list .reg:hover { background: var(--ink); color: var(--paper); }\n.region-list .reg .reg-num {\n  font-size: 12px;\n  letter-spacing: 0.08em;\n  color: var(--ink-3);\n  display: block;\n  margin-bottom: 20px;\n  font-weight: 500;\n}\n.region-list .reg:hover .reg-num { color: var(--clay); }\n.region-list .reg .reg-name {\n  font-family: var(--serif);\n  font-size: 34px;\n  line-height: 1.05;\n  letter-spacing: -0.01em;\n  margin-bottom: 16px;\n}\n.region-list .reg .reg-areas {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n  margin-top: auto;\n  padding-top: 12px;\n  border-top: 1px solid var(--rule);\n}\n.region-list .reg .reg-areas > span {\n  font-size: 14px;\n  font-family: var(--serif);\n  font-style: italic;\n  color: var(--ink-2);\n  line-height: 1.3;\n}\n.region-list .reg:hover .reg-areas > span { color: var(--paper); }\n.region-list .reg:hover .reg-areas { border-top-color: rgba(244,239,229,0.2); }\n\n/* ============= Course module rows ============= */\n.module-row {\n  display: grid;\n  grid-template-columns: 70px 1.4fr 2fr 140px;\n  align-items: center;\n  padding: 32px 0;\n  border-bottom: 1px solid var(--rule);\n  gap: 32px;\n  transition: padding 0.25s;\n}\n.module-row:hover { padding-left: 12px; }\n.module-row:hover .mod-name { color: var(--clay); }\n.module-row .mod-num {\n  font-size: 13px;\n  letter-spacing: 0.08em;\n  color: var(--clay);\n  font-weight: 500;\n}\n.module-row .mod-name {\n  font-family: var(--serif);\n  font-size: clamp(28px, 2.4vw, 40px);\n  line-height: 1.05;\n  letter-spacing: -0.012em;\n  transition: color 0.25s;\n}\n.module-row .mod-desc {\n  color: var(--ink-3);\n  font-size: 15px;\n  line-height: 1.55;\n}\n.module-row .mod-price {\n  font-family: var(--serif);\n  font-size: 28px;\n  text-align: right;\n}\n@media (max-width: 900px) {\n  .module-row { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }\n  .module-row .mod-price { text-align: left; }\n}\n\n/* ============= Footer ============= */\n.footer {\n  background: var(--ink);\n  color: var(--paper);\n  padding: 96px 0 40px;\n}\n.footer a:hover { color: var(--tan); }\n.footer-petowner {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 40px;\n  flex-wrap: wrap;\n  padding-bottom: 52px;\n  margin-bottom: 56px;\n  border-bottom: 1px solid rgba(244,239,229,0.18);\n}\n.footer-grid {\n  display: grid;\n  grid-template-columns: 1.6fr 1fr 1fr 1fr;\n  gap: 56px;\n}\n@media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }\n.footer-col h4 {\n  font-size: 11px;\n  letter-spacing: 0.22em;\n  text-transform: uppercase;\n  color: var(--tan);\n  margin-bottom: 22px;\n  font-weight: 500;\n}\n.footer-col ul li { padding: 5px 0; font-size: 15px; color: rgba(244,239,229,0.78); }\n.footer-bottom {\n  margin-top: 80px;\n  padding-top: 32px;\n  border-top: 1px solid rgba(244,239,229,0.18);\n  display: flex;\n  justify-content: space-between;\n  font-size: 12px;\n  color: rgba(244,239,229,0.6);\n  gap: 24px;\n  flex-wrap: wrap;\n}\n\n/* ============= Page hero ============= */\n.page-hero {\n  padding-top: 80px;\n  padding-bottom: 100px;\n  border-bottom: 1px solid var(--rule);\n}\n\n/* ============= Backgrounds ============= */\n.bg-ink { background: var(--ink); color: var(--paper); }\n.bg-ink .eyebrow { color: var(--tan); }\n.bg-forest { background: var(--forest); color: var(--paper); }\n.bg-cream { background: var(--cream); }\n.bg-paper-deep { background: var(--paper-deep); }\n\n/* Hero reveal — CSS-only, bulletproof */\n.hero-name {\n  opacity: 0;\n  transform: translateY(20px);\n  animation: heroIn 1.1s cubic-bezier(0.2,0.7,0.2,1) 0.15s forwards;\n}\n.hero-name .line-2 {\n  display: inline-block;\n  opacity: 0;\n  transform: translateY(20px);\n  animation: heroIn 1.1s cubic-bezier(0.2,0.7,0.2,1) 0.35s forwards;\n}\n.hero-lede {\n  opacity: 0;\n  transform: translateY(16px);\n  animation: heroIn 0.9s cubic-bezier(0.2,0.7,0.2,1) 0.55s forwards;\n}\n.hero-ctas {\n  opacity: 0;\n  transform: translateY(16px);\n  animation: heroIn 0.9s cubic-bezier(0.2,0.7,0.2,1) 0.7s forwards;\n}\n.hero-eyebrow {\n  opacity: 0;\n  animation: heroIn 0.6s ease 0s forwards;\n}\n@keyframes heroIn {\n  to { opacity: 1; transform: translateY(0); }\n}\n@media (prefers-reduced-motion: reduce) {\n  .hero-name, .hero-name .line-2, .hero-lede, .hero-ctas, .hero-eyebrow { animation: none; opacity: 1; transform: none; }\n}\n\n/* ============= Anim helpers ============= */\n.fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }\n.fade-up.in { opacity: 1; transform: translateY(0); }\n\n/* Split-text — staggered word reveal */\n.split-word {\n  display: inline-block;\n  opacity: 0;\n  transform: translateY(60%) skewY(4deg);\n  transition: opacity 0.9s cubic-bezier(0.2,0.7,0.2,1), transform 0.9s cubic-bezier(0.2,0.7,0.2,1);\n}\n.split-word.in { opacity: 1; transform: translateY(0) skewY(0); }\n.split-mask { display: inline-block; overflow: hidden; padding-bottom: 0.08em; line-height: inherit; vertical-align: bottom; }\n\n/* Hero ken-burns drift */\n@keyframes drift {\n  0%   { transform: scale(1.04) translate(0,0); }\n  50%  { transform: scale(1.07) translate(-1.2%, -1%); }\n  100% { transform: scale(1.04) translate(0,0); }\n}\n.hero-portrait { animation: drift 24s ease-in-out infinite; }\n\n/* Marquee */\n.marquee {\n  overflow: hidden;\n  border-top: 1px solid var(--rule);\n  border-bottom: 1px solid var(--rule);\n  background: var(--paper);\n  padding: 20px 0;\n  white-space: nowrap;\n}\n.marquee-track {\n  display: inline-flex;\n  gap: 64px;\n  animation: marquee 48s linear infinite;\n  padding-left: 64px;\n  will-change: transform;\n}\n.marquee-item {\n  font-family: var(--serif);\n  font-size: clamp(22px, 1.8vw, 28px);\n  font-style: italic;\n  color: var(--ink);\n  display: inline-flex;\n  align-items: center;\n  gap: 64px;\n}\n.marquee-item::after {\n  content: '✦';\n  color: var(--clay);\n  font-style: normal;\n  font-size: 0.7em;\n}\n@keyframes marquee {\n  0%   { transform: translateX(0); }\n  100% { transform: translateX(-50%); }\n}\n\n/* Practice card hover */\n.practice-card {\n  position: relative;\n  overflow: hidden;\n  transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1);\n}\n.practice-card::after {\n  content: '';\n  position: absolute;\n  left: 0; right: 0; bottom: 0;\n  height: 3px;\n  background: var(--clay);\n  transform: scaleX(0);\n  transform-origin: left;\n  transition: transform 0.5s cubic-bezier(0.2,0.7,0.2,1);\n}\n.practice-card:hover { transform: translateY(-4px); }\n.practice-card:hover::after { transform: scaleX(1); }\n\n/* Region hover fill */\n.region-list .reg {\n  position: relative;\n  overflow: hidden;\n}\n.region-list .reg::before {\n  content: '';\n  position: absolute;\n  left: 0; right: 0; top: 100%;\n  height: 100%;\n  background: var(--ink);\n  transition: top 0.45s cubic-bezier(0.2,0.7,0.2,1);\n  z-index: 0;\n}\n.region-list .reg:hover { background: transparent; }\n.region-list .reg:hover::before { top: 0; }\n.region-list .reg > * { position: relative; z-index: 1; }\n.region-list .reg:hover { color: var(--paper); }\n.region-list .reg:hover .reg-num { color: var(--clay); }\n.region-list .reg:hover .reg-sub { color: var(--ink-4); }\n\n/* Nav link underline animation */\n.nav-links a {\n  position: relative;\n}\n.nav-links a::after {\n  content: '';\n  position: absolute;\n  left: 0; right: 0; bottom: 0;\n  height: 1px;\n  background: var(--clay);\n  transform: scaleX(0);\n  transform-origin: right;\n  transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1);\n}\n.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); transform-origin: left; }\n.nav-links a, .nav-links a.active { border-bottom: none !important; }\n\n/* Btn hover micro-motion */\n.btn { transition: background 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.2,0.7,0.2,1); }\n.btn:hover { transform: translateY(-1px); }\n.btn .arrow { transition: transform 0.25s cubic-bezier(0.2,0.7,0.2,1); }\n.btn:hover .arrow { transform: translate(3px, -1px); }\n\n/* Subtle eyebrow dot pulse */\n.eyebrow-dot {\n  display: inline-block;\n  width: 6px; height: 6px;\n  background: var(--clay);\n  border-radius: 50%;\n  margin-right: 10px;\n  vertical-align: 1px;\n  box-shadow: 0 0 0 0 var(--clay);\n  animation: dot-pulse 2.6s ease-out infinite;\n}\n@keyframes dot-pulse {\n  0%   { box-shadow: 0 0 0 0 rgba(177,106,72,0.55); }\n  70%  { box-shadow: 0 0 0 10px rgba(177,106,72,0); }\n  100% { box-shadow: 0 0 0 0 rgba(177,106,72,0); }\n}\n\n/* Stats count container */\n.stat-num {\n  display: inline-block;\n  font-variant-numeric: tabular-nums;\n}\n\n/* Section head label slight in */\n.section-head .label .eyebrow {\n  position: relative;\n  padding-left: 28px;\n}\n.section-head .label .eyebrow::before {\n  content: '';\n  position: absolute;\n  left: 0; top: 50%;\n  width: 18px; height: 1px;\n  background: var(--clay);\n}\n\n/* Reduce motion preference */\n@media (prefers-reduced-motion: reduce) {\n  .hero-portrait { animation: none; }\n  .marquee-track { animation: none; }\n  .split-word { transition-duration: 0.3s !important; }\n  .eyebrow-dot { animation: none; }\n}\n\n/* ============= Network Map ============= */\n.map-wrap {\n  position: relative;\n  background: var(--paper);\n  border-top: 1px solid var(--ink);\n  border-bottom: 1px solid var(--ink);\n  overflow: hidden;\n}\n.map-svg {\n  display: block;\n  width: 100%;\n  height: 100%;\n  background: var(--paper);\n}\n\n/* .map-zoom — transform is driven by requestAnimationFrame via SVG attribute.\n   Don't apply CSS transform here; it doesn't work on <g> in some browsers. */\n.map-zoom { will-change: transform; }\n/* When zoomed, the path layer is purely decorative — let pointer events fall through */\n.map-zoom.is-zoomed .country-path { pointer-events: none; }\n\n/* Markers transition smoothly. Use longer duration matching the camera. */\n.marker .marker-dot,\n.marker .marker-ring,\n.marker .marker-hit,\n.marker .marker-pulse {\n  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;\n}\n/* All non-focused markers shrink + dim while zoomed so the target is hero. */\n.map-zoom.is-zoomed .marker:not(.focused) .marker-dot {\n  transform: scale(0.28);\n  opacity: 0.32;\n}\n.map-zoom.is-zoomed .marker:not(.focused) .marker-ring {\n  transform: scale(0.28);\n  opacity: 0.18;\n}\n.map-zoom.is-zoomed .marker:not(.focused) .marker-hit {\n  transform: scale(0.4);\n}\n.map-zoom.is-zoomed .marker:not(.focused) .marker-pulse {\n  opacity: 0;\n}\n/* Focused marker pops + glows */\n.map-zoom.is-zoomed .marker.focused .marker-dot {\n  transform: scale(1);\n  filter: drop-shadow(0 0 6px rgba(177,106,72,0.7));\n}\n.map-zoom.is-zoomed .marker.focused .marker-ring {\n  transform: scale(1.2);\n  opacity: 1;\n  stroke-width: 1.4;\n}\n.map-zoom.is-zoomed .marker.focused .marker-hit {\n  transform: scale(2);\n}\n.map-zoom.is-zoomed .marker.focused .marker-pulse {\n  transform: scale(1);\n  transform-origin: center;\n  transform-box: fill-box;\n}\n.map-zoom.is-zoomed .marker.primary.focused .marker-dot {\n  transform: scale(0.7);\n}\n.map-zoom.is-zoomed .marker.primary.focused .marker-ring {\n  transform: scale(0.9);\n}\n\n.country-path {\n  fill: var(--paper-deep);\n  stroke: var(--paper);\n  stroke-width: 0.6;\n  vector-effect: non-scaling-stroke;\n  transition: fill 0.2s ease;\n}\n.country-path.has-clinic {\n  fill: #DBD3BB;\n}\n.country-path.is-primary {\n  fill: #C7B98F;\n}\n.country-path.is-hover {\n  fill: var(--clay) !important;\n  fill-opacity: 0.6;\n}\n\n.marker {\n  cursor: pointer;\n  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);\n  transform-origin: center;\n  transform-box: fill-box;\n}\n.marker-ring {\n  fill: none;\n  stroke: var(--clay);\n  stroke-width: 1;\n  transform-origin: center;\n  transform-box: fill-box;\n  opacity: 0.6;\n  pointer-events: none;\n}\n.marker-dot {\n  fill: var(--clay);\n  stroke: var(--paper);\n  stroke-width: 1.6;\n  transform-origin: center;\n  transform-box: fill-box;\n  pointer-events: none;\n}\n.marker-pulse { pointer-events: none; }\n.marker-hit {\n  fill: transparent;\n  pointer-events: all;\n  transform-origin: center;\n  transform-box: fill-box;\n}\n.marker.primary .marker-dot {\n  fill: var(--ink);\n  stroke: var(--clay);\n  stroke-width: 2.4;\n  filter: drop-shadow(0 1.5px 3px rgba(24,33,28,0.55));\n}\n.marker.primary .marker-ring {\n  stroke: var(--ink);\n  stroke-width: 1.6;\n  opacity: 0.7;\n}\n.marker.graduate .marker-dot {\n  fill: var(--sage);\n  stroke: var(--paper);\n  stroke-width: 1.4;\n}\n.marker.graduate .marker-ring {\n  stroke: var(--sage);\n  opacity: 0.45;\n}\n.marker:hover .marker-dot, .marker.selected .marker-dot {\n  transform: scale(1.4);\n}\n.marker:hover .marker-ring, .marker.selected .marker-ring {\n  transform: scale(1.6);\n  opacity: 0.85;\n}\n/* Marker pulse */\n@keyframes marker-pulse {\n  0%   { r: 7; opacity: 0.75; }\n  100% { r: 26; opacity: 0; }\n}\n.marker-pulse {\n  fill: none;\n  stroke: var(--clay);\n  stroke-width: 1.4;\n  animation: marker-pulse 2.4s ease-out infinite;\n  pointer-events: none;\n}\n.marker.primary .marker-pulse {\n  stroke: var(--ink);\n  stroke-width: 1.8;\n}\n\n/* Tooltip */\n.map-tip {\n  position: absolute;\n  background: var(--ink);\n  color: var(--paper);\n  padding: 12px 16px;\n  pointer-events: none;\n  z-index: 5;\n  transform: translate(12px, -50%);\n  max-width: 280px;\n  box-shadow: 0 12px 28px -8px rgba(24,33,28,0.5);\n  font-size: 13px;\n  line-height: 1.4;\n  border-left: 3px solid var(--clay);\n}\n.map-tip .tip-name { font-family: var(--serif); font-size: 18px; line-height: 1.15; color: var(--paper); margin-bottom: 6px; }\n.map-tip .tip-loc { color: var(--tan); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }\n\n/* Close-zoom button */\n.map-close-zoom {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 16px;\n  background: var(--paper);\n  border: 1px solid var(--ink);\n  color: var(--ink);\n  font-size: 11px;\n  letter-spacing: 0.16em;\n  text-transform: uppercase;\n  font-weight: 500;\n  cursor: pointer;\n  box-shadow: 0 8px 22px -10px rgba(24,33,28,0.35);\n  z-index: 6;\n  transition: background 0.2s, color 0.2s;\n  font-family: var(--sans);\n}\n.map-close-zoom span { font-size: 14px; line-height: 1; }\n.map-close-zoom:hover { background: var(--ink); color: var(--paper); }\n\n/* Legend */\n.map-legend {\n  display: flex; gap: 24px;\n  align-items: center;\n  padding: 16px 0;\n  font-size: 13px;\n  color: var(--ink-3);\n}\n.map-legend .lg-dot {\n  display: inline-block;\n  width: 10px; height: 10px; border-radius: 50%;\n  margin-right: 8px;\n  vertical-align: -1px;\n}\n.map-legend .lg-dot.primary { background: var(--ink); border: 2px solid var(--clay); }\n.map-legend .lg-dot.trained { background: var(--clay); border: 1px solid var(--paper); }\n.map-legend .lg-dot.graduate { background: var(--sage); border: 1px solid var(--paper); }\n.map-legend .lg-tint {\n  display: inline-block;\n  width: 16px; height: 10px;\n  margin-right: 8px;\n  vertical-align: -1px;\n  background: #DBD3BB;\n}\n\n/* Detail card */\n.map-detail {\n  background: var(--ink);\n  color: var(--paper);\n  padding: 36px 40px;\n  display: grid;\n  grid-template-columns: 80px 1fr 1fr 200px;\n  gap: 36px;\n  align-items: start;\n}\n.map-detail .md-num {\n  font-family: var(--serif);\n  font-size: 48px;\n  line-height: 1;\n  color: var(--clay);\n  letter-spacing: -0.02em;\n}\n.map-detail .md-name {\n  font-family: var(--serif);\n  font-size: 30px;\n  line-height: 1.1;\n  letter-spacing: -0.012em;\n  color: var(--paper);\n}\n.map-detail .md-eb {\n  font-size: 11px;\n  letter-spacing: 0.22em;\n  color: var(--tan);\n  text-transform: uppercase;\n  margin-bottom: 6px;\n  font-weight: 500;\n}\n.map-detail a { color: var(--tan); border-bottom: 1px solid rgba(244,239,229,0.3); transition: color 0.2s, border-color 0.2s; }\n.map-detail a:hover { color: var(--paper); border-bottom-color: var(--paper); }\n.map-detail .md-name-link {\n  color: var(--paper);\n  border-bottom: none;\n  transition: color 0.2s;\n}\n.map-detail .md-name-link:hover { color: var(--clay); border-bottom: none; }\n@media (max-width: 900px) {\n  .map-detail { grid-template-columns: 1fr; gap: 18px; padding: 28px 24px; }\n  .map-detail .md-num { font-size: 32px; }\n}\n\n/* Clinic list */\n.clinic-list {\n  border-top: 1px solid var(--ink);\n}\n.clinic-row {\n  display: grid;\n  grid-template-columns: 50px 1.4fr 1.1fr 1fr 130px;\n  gap: 24px;\n  padding: 24px 0;\n  border-bottom: 1px solid var(--rule);\n  align-items: center;\n  cursor: pointer;\n  transition: padding 0.25s, background 0.25s;\n}\n.clinic-row:hover, .clinic-row.active {\n  padding-left: 12px;\n  background: rgba(177,106,72,0.05);\n}\n.clinic-row .cr-num {\n  font-size: 11px;\n  letter-spacing: 0.18em;\n  color: var(--ink-3);\n  font-weight: 500;\n}\n.clinic-row .cr-name {\n  font-family: var(--serif);\n  font-size: 24px;\n  line-height: 1.1;\n  letter-spacing: -0.01em;\n}\n.clinic-row.active .cr-name { color: var(--clay); }\n.clinic-row .cr-loc {\n  font-size: 14px;\n  color: var(--ink-3);\n}\n.clinic-row .cr-clinic {\n  font-size: 14px;\n  color: var(--ink-2);\n}\n.clinic-row .cr-link {\n  color: var(--ink-2);\n  border-bottom: 1px solid transparent;\n  transition: color 0.2s, border-color 0.2s;\n}\n.clinic-row .cr-link:hover {\n  color: var(--clay);\n  border-bottom-color: var(--clay);\n}\n.clinic-row .cr-link-arrow {\n  font-size: 11px;\n  color: var(--ink-3);\n  margin-left: 2px;\n  transition: color 0.2s, transform 0.2s;\n  display: inline-block;\n}\n.clinic-row .cr-link:hover .cr-link-arrow {\n  color: var(--clay);\n  transform: translate(2px, -2px);\n}\n.clinic-row .cr-tag {\n  font-size: 10px;\n  letter-spacing: 0.18em;\n  text-transform: uppercase;\n  color: var(--clay);\n  text-align: right;\n  font-weight: 500;\n}\n.clinic-row.primary .cr-tag { color: var(--ink); }\n.clinic-row.graduate .cr-tag { color: var(--sage-deep); }\n@media (max-width: 900px) {\n  .clinic-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }\n  .clinic-row .cr-tag { text-align: left; }\n}\n\n/* Filter chips */\n.chip-row {\n  display: flex; gap: 10px; flex-wrap: wrap;\n  margin-bottom: 32px;\n}\n.chip {\n  padding: 10px 18px;\n  border: 1px solid var(--rule-2);\n  background: var(--paper);\n  font-size: 13px;\n  letter-spacing: 0.04em;\n  color: var(--ink-2);\n  cursor: pointer;\n  transition: background 0.2s, color 0.2s, border-color 0.2s;\n}\n.chip:hover { border-color: var(--ink); }\n.chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }\n\n/* Map view tab toggle */\n.map-tab {\n  padding: 10px 22px;\n  font-size: 12px;\n  letter-spacing: 0.08em;\n  color: var(--ink);\n  background: var(--paper);\n  border: none;\n  cursor: pointer;\n  font-weight: 500;\n  transition: background 0.2s, color 0.2s;\n}\n.map-tab + .map-tab { border-left: 1px solid var(--ink); }\n.map-tab[data-active=\"true\"] { background: var(--ink); color: var(--paper); }\n.map-tab:hover[data-active=\"false\"], .map-tab:hover:not([data-active=\"true\"]) { background: rgba(24,33,28,0.06); }\n\n/* Map loading state */\n.map-loading {\n  height: 600px;\n  display: flex; align-items: center; justify-content: center;\n  font-family: var(--serif); font-size: 22px; color: var(--ink-3);\n  font-style: italic;\n}\n.map-loading::before {\n  content: '';\n  width: 24px; height: 24px;\n  border: 2px solid var(--rule-2);\n  border-top-color: var(--clay);\n  border-radius: 50%;\n  margin-right: 14px;\n  animation: spin 0.9s linear infinite;\n}\n@keyframes spin { to { transform: rotate(360deg); } }";
+  var __css="/* ============================================================\n   Dr. Debra Canapp — Editorial system\n   Two fonts only: Cormorant Garamond (display) + Inter (everything else)\n   Earthy + boutique. Calm. Less.\n   ============================================================ */\n\n:root {\n  /* Surfaces */\n  --paper: #F4EFE5;\n  --cream: #FBF8F1;\n  --paper-deep: #E8E1D2;\n\n  /* Inks */\n  --ink: #18211C;\n  --ink-2: #2D3A2F;\n  --ink-3: #5C6759;\n  --ink-4: #8B9482;\n\n  /* Tonal */\n  --forest: #1F2A22;\n  --sage: #7C8A6C;\n  --tan: #C2A878;\n  --clay: #B16A48;\n  --clay-deep: #8C4F33;\n\n  /* Rules */\n  --rule: rgba(24,33,28,0.12);\n  --rule-2: rgba(24,33,28,0.24);\n\n  /* Type — JUST TWO */\n  --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;\n  --sans:  'Inter', -apple-system, system-ui, sans-serif;\n\n  --maxw: 1360px;\n  --pad: 64px;\n}\n\n@media (max-width: 900px) { :root { --pad: 24px; } }\n\n* , *::before, *::after { box-sizing: border-box; }\nhtml, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }\nbody { font-size: 16px; line-height: 1.6; overflow-x: clip; }\nimg { display: block; max-width: 100%; }\na { color: inherit; text-decoration: none; }\nbutton { font-family: inherit; cursor: pointer; border: none; background: none; padding: 0; color: inherit; }\nh1, h2, h3, h4, h5 { margin: 0; font-weight: 400; }\np { margin: 0; }\nul, ol { margin: 0; padding: 0; list-style: none; }\n::selection { background: var(--ink); color: var(--paper); }\n\n/* ============= Reusable ============= */\n.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); width: 100%; }\n\n.eyebrow {\n  font-family: var(--sans);\n  font-size: 11px;\n  letter-spacing: 0.22em;\n  text-transform: uppercase;\n  color: var(--ink-3);\n  font-weight: 500;\n}\n\n.serif { font-family: var(--serif); font-weight: 400; letter-spacing: -0.01em; }\n.serif-it { font-family: var(--serif); font-style: italic; font-weight: 400; }\n\n.h-display { font-family: var(--serif); font-size: clamp(56px, 8vw, 128px); line-height: 0.96; letter-spacing: -0.02em; font-weight: 400; }\n.h-section { font-family: var(--serif); font-size: clamp(40px, 5vw, 76px); line-height: 1.02; letter-spacing: -0.015em; font-weight: 400; }\n.h-block   { font-family: var(--serif); font-size: clamp(26px, 2.8vw, 40px); line-height: 1.08; letter-spacing: -0.012em; font-weight: 400; }\n\n.lede { font-family: var(--serif); font-size: clamp(19px, 1.4vw, 24px); line-height: 1.5; color: var(--ink-2); font-weight: 400; }\n.body { font-size: 16px; line-height: 1.7; color: var(--ink-2); }\n.body-lg { font-size: 18px; line-height: 1.65; color: var(--ink-2); }\n.small { font-size: 14px; line-height: 1.5; color: var(--ink-3); }\n\n/* ============= Logo sticker ============= */\n.logo-sticker {\n  position: relative;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 76px;\n  height: 76px;\n  border-radius: 50%;\n  background: var(--ink);\n  padding: 10px;\n  box-shadow: 0 6px 18px -8px rgba(24,33,28,0.4);\n  transform: rotate(-6deg);\n  transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.4s;\n  overflow: hidden;\n}\n.logo-sticker::before {\n  content: '';\n  position: absolute;\n  inset: 6px;\n  border-radius: 50%;\n  border: 1px dashed rgba(244,239,229,0.32);\n  pointer-events: none;\n}\n.logo-sticker:hover { transform: rotate(2deg) scale(1.04); box-shadow: 0 10px 24px -6px rgba(24,33,28,0.5); }\n.logo-sticker img {\n  width: 100%; height: 100%;\n  object-fit: contain;\n  filter: invert(1) brightness(1.3);\n}\n\n/* Lighter sticker variant */\n.logo-sticker.bone { background: var(--paper); }\n.logo-sticker.bone::before { border-color: rgba(24,33,28,0.3); }\n.logo-sticker.bone img { filter: none; }\n\n.logo-sticker.clay { background: var(--clay); }\n.logo-sticker.clay::before { border-color: rgba(244,239,229,0.4); }\n\n/* Footer big sticker */\n.logo-sticker.lg { width: 120px; height: 120px; padding: 16px; }\n\n/* ============= Nav ============= */\n.nav-bar {\n  position: sticky; top: 0; z-index: 50;\n  background: rgba(244,239,229,0.92);\n  backdrop-filter: blur(10px);\n  -webkit-backdrop-filter: blur(10px);\n  border-bottom: 1px solid var(--rule);\n}\n.nav-inner {\n  display: flex;\n  align-items: center;\n  gap: 40px;\n  height: 84px;\n}\n.nav-brand {\n  display: flex; align-items: center; gap: 14px;\n  flex: 0 0 auto;\n  position: relative;\n  z-index: 2;\n}\n.nav-logo {\n  height: 50px;\n  width: auto;\n  display: block;\n  transform-origin: left top;\n  transition: transform 460ms cubic-bezier(0.22, 1, 0.36, 1),\n              filter 460ms ease;\n  will-change: transform;\n}\n.nav-brand > span:nth-child(2) {\n  transition: opacity 220ms ease, transform 460ms cubic-bezier(0.22, 1, 0.36, 1);\n}\n.nav-brand:hover .nav-logo,\n.nav-brand:focus-visible .nav-logo {\n  transform: translateY(2px) scale(2.1);\n  filter: drop-shadow(0 14px 26px rgba(24, 33, 28, 0.22));\n}\n.nav-brand:hover > span:nth-child(2),\n.nav-brand:focus-visible > span:nth-child(2) {\n  opacity: 0;\n  transform: translateX(-6px);\n  pointer-events: none;\n}\n@media (max-width: 700px) {\n  .nav-logo { height: 44px; }\n}\n.nav-brand .nav-name {\n  font-family: var(--serif);\n  font-size: 19px;\n  letter-spacing: -0.01em;\n  color: var(--ink);\n  line-height: 1.1;\n  white-space: nowrap;\n}\n.nav-brand .nav-sub {\n  font-size: 9.5px;\n  letter-spacing: 0.18em;\n  text-transform: uppercase;\n  color: var(--ink-3);\n  margin-top: 4px;\n  font-weight: 500;\n  white-space: nowrap;\n}\n@media (max-width: 1180px) {\n  .nav-brand > span:nth-child(2) { display: none; }\n}\n@media (max-width: 700px) {\n  .nav-logo { height: 40px; }\n}\n.nav-links {\n  display: flex;\n  gap: 26px;\n  flex: 1 1 auto;\n  justify-content: flex-start;\n}\n.nav-links a {\n  font-size: 13px;\n  letter-spacing: 0;\n  color: var(--ink-2);\n  padding: 8px 0;\n  transition: color 0.2s;\n  white-space: nowrap;\n}\n.nav-right {\n  margin-left: auto;\n  display: flex; align-items: center; gap: 14px;\n}\n.nav-portal {\n  font-family: var(--mono, ui-monospace, \"JetBrains Mono\", monospace);\n  font-size: 11px;\n  letter-spacing: 0.14em;\n  text-transform: uppercase;\n  color: var(--ink-2);\n  display: inline-flex;\n  align-items: center;\n  white-space: nowrap;\n  text-decoration: none;\n  padding: 6px 2px;\n  border-bottom: 1px solid transparent;\n  transition: color 0.2s ease, border-color 0.2s ease;\n}\n.nav-portal:hover { color: var(--clay); border-bottom-color: var(--clay); }\n.nav-divider {\n  width: 1px;\n  height: 18px;\n  background: var(--rule-2, rgba(31,31,31,0.18));\n  display: inline-block;\n}\n/* Hamburger toggle — hidden on desktop */\n.nav-toggle {\n  display: none;\n  flex-direction: column;\n  justify-content: center;\n  gap: 5px;\n  width: 44px;\n  height: 44px;\n  margin-left: auto;\n  padding: 0;\n  border: none;\n  background: none;\n  cursor: pointer;\n  z-index: 60;\n}\n.nav-toggle span {\n  display: block;\n  width: 24px;\n  height: 2px;\n  margin: 0 auto;\n  background: var(--ink);\n  transition: transform 0.3s cubic-bezier(0.2,0.7,0.2,1), opacity 0.2s ease;\n}\n.nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }\n.nav-toggle.is-open span:nth-child(2) { opacity: 0; }\n.nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }\n/* Mobile menu panel */\n.nav-mobile {\n  display: none;\n  position: fixed;\n  top: 68px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  height: calc(100dvh - 68px);\n  background: var(--paper);\n  border-top: 1px solid var(--rule);\n  padding: clamp(12px,2.5vh,30px) var(--pad) max(clamp(16px,3vh,32px), env(safe-area-inset-bottom));\n  flex-direction: column;\n  justify-content: space-between;\n  opacity: 0;\n  transform: translateY(-8px);\n  pointer-events: none;\n  transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.2,0.7,0.2,1);\n  overflow-y: auto;\n  z-index: 55;\n}\n.nav-mobile.is-open { opacity: 1; transform: translateY(0); pointer-events: auto; }\n.nav-mobile-links { display: flex; flex-direction: column; }\n.nav-mobile-links a {\n  font-family: var(--serif);\n  font-size: clamp(18px,4.2vh,26px);\n  line-height: 1.12;\n  letter-spacing: -0.01em;\n  color: var(--ink);\n  padding: clamp(6px,1.3vh,14px) 0;\n  border-bottom: 1px solid var(--rule);\n}\n.nav-mobile-links a.active { color: var(--clay); }\n.nav-mobile-foot {\n  margin-top: clamp(14px,2.5vh,28px);\n  display: flex;\n  flex-direction: column;\n  gap: clamp(10px,2vh,18px);\n  align-items: flex-start;\n}\n.nav-mobile-portal {\n  display: inline-flex;\n  align-items: center;\n  font-family: var(--mono, ui-monospace, \"JetBrains Mono\", monospace);\n  font-size: 13px;\n  letter-spacing: 0.14em;\n  text-transform: uppercase;\n  color: var(--ink-2);\n}\n@media (max-width: 980px) {\n  .nav-portal { display: none; }\n  .nav-divider { display: none; }\n}\n@media (max-width: 1240px) {\n  .nav-links { gap: 18px; }\n  .nav-links a { font-size: 12.5px; }\n}\n@media (max-width: 1080px) {\n  .nav-links { gap: 14px; }\n  .nav-links a { font-size: 12px; }\n}\n@media (max-width: 980px) {\n  .nav-links { display: none; }\n  .nav-inner { height: 68px; gap: 20px; }\n  .nav-right { display: none; }\n  .nav-toggle { display: flex; }\n  .nav-mobile { display: flex; }\n}\n\n/* ============= Buttons ============= */\n.btn {\n  display: inline-flex;\n  align-items: center;\n  gap: 10px;\n  padding: 14px 22px;\n  font-family: var(--sans);\n  font-size: 13px;\n  letter-spacing: 0.04em;\n  font-weight: 500;\n  border: 1px solid var(--ink);\n  background: var(--ink);\n  color: var(--paper);\n  transition: background 0.2s, color 0.2s, border-color 0.2s;\n  cursor: pointer;\n}\n.btn:hover { background: var(--forest); }\n.btn .arrow { font-family: var(--serif); font-size: 18px; line-height: 1; transform: translateY(-1px); }\n.btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }\n.btn-ghost:hover { background: var(--ink); color: var(--paper); }\n.btn-clay { background: var(--clay); border-color: var(--clay); color: var(--paper); }\n.btn-clay:hover { background: var(--clay-deep); border-color: var(--clay-deep); }\n.btn-sm { padding: 10px 16px; font-size: 12px; }\n\n.link-arrow {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  font-size: 13px;\n  letter-spacing: 0.04em;\n  font-weight: 500;\n  color: var(--ink);\n  border-bottom: 1px solid var(--rule-2);\n  padding-bottom: 4px;\n  transition: color 0.2s, border-color 0.2s;\n}\n.link-arrow:hover { color: var(--clay); border-bottom-color: var(--clay); }\n.link-arrow .arrow { font-family: var(--serif); font-size: 16px; transition: transform 0.2s; }\n.link-arrow:hover .arrow { transform: translateX(3px); }\n\n/* ============= Section scaffolding ============= */\nsection { position: relative; }\n.section-pad { padding: clamp(80px, 9vw, 144px) 0; }\n\n.section-head {\n  display: grid;\n  grid-template-columns: 180px 1fr;\n  gap: 48px;\n  margin-bottom: 72px;\n  align-items: start;\n}\n.section-head .label { padding-top: 14px; }\n@media (max-width: 800px) {\n  .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 40px; }\n}\n\n/* ============= Hero ============= */\n.hero {\n  background: var(--paper);\n  overflow: hidden;\n}\n.hero-grid {\n  display: grid;\n  grid-template-columns: 1.1fr 0.9fr;\n  align-items: stretch;\n  min-height: 78vh;\n}\n@media (max-width: 1000px) { .hero-grid { grid-template-columns: 1fr; min-height: auto; } }\n\n.hero-left {\n  padding: clamp(56px, 8vw, 120px) clamp(48px, 5vw, 80px) clamp(56px, 8vw, 120px) 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  gap: 40px;\n}\n@media (max-width: 1000px) { .hero-left { padding-right: 0; padding-bottom: 48px; } }\n\n.hero-right {\n  position: relative;\n  background: var(--paper-deep);\n}\n.hero-portrait {\n  width: 100%;\n  height: 100%;\n  min-height: 480px;\n  object-fit: cover;\n  object-position: center 25%;\n}\n\n/* ============= Anatomy strip ============= */\n.region-list {\n  display: grid;\n  grid-template-columns: repeat(5, 1fr);\n  border-top: 1px solid var(--ink);\n  border-bottom: 1px solid var(--ink);\n}\n@media (max-width: 900px) { .region-list { grid-template-columns: repeat(2, 1fr); } }\n.region-list .reg {\n  padding: 32px 24px 36px;\n  border-right: 1px solid var(--rule);\n  cursor: pointer;\n  transition: background 0.25s, color 0.25s;\n  display: flex;\n  flex-direction: column;\n}\n.region-list .reg:last-child { border-right: none; }\n.region-list .reg:hover { background: var(--ink); color: var(--paper); }\n.region-list .reg .reg-num {\n  font-size: 12px;\n  letter-spacing: 0.08em;\n  color: var(--ink-3);\n  display: block;\n  margin-bottom: 20px;\n  font-weight: 500;\n}\n.region-list .reg:hover .reg-num { color: var(--clay); }\n.region-list .reg .reg-name {\n  font-family: var(--serif);\n  font-size: 34px;\n  line-height: 1.05;\n  letter-spacing: -0.01em;\n  margin-bottom: 16px;\n}\n.region-list .reg .reg-areas {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n  margin-top: auto;\n  padding-top: 12px;\n  border-top: 1px solid var(--rule);\n}\n.region-list .reg .reg-areas > span {\n  font-size: 14px;\n  font-family: var(--serif);\n  font-style: italic;\n  color: var(--ink-2);\n  line-height: 1.3;\n}\n.region-list .reg:hover .reg-areas > span { color: var(--paper); }\n.region-list .reg:hover .reg-areas { border-top-color: rgba(244,239,229,0.2); }\n\n/* ============= Course module rows ============= */\n.module-row {\n  display: grid;\n  grid-template-columns: 70px 1.4fr 2fr 140px;\n  align-items: center;\n  padding: 32px 0;\n  border-bottom: 1px solid var(--rule);\n  gap: 32px;\n  transition: padding 0.25s;\n}\n.module-row:hover { padding-left: 12px; }\n.module-row:hover .mod-name { color: var(--clay); }\n.module-row .mod-num {\n  font-size: 13px;\n  letter-spacing: 0.08em;\n  color: var(--clay);\n  font-weight: 500;\n}\n.module-row .mod-name {\n  font-family: var(--serif);\n  font-size: clamp(28px, 2.4vw, 40px);\n  line-height: 1.05;\n  letter-spacing: -0.012em;\n  transition: color 0.25s;\n}\n.module-row .mod-desc {\n  color: var(--ink-3);\n  font-size: 15px;\n  line-height: 1.55;\n}\n.module-row .mod-price {\n  font-family: var(--serif);\n  font-size: 28px;\n  text-align: right;\n}\n@media (max-width: 900px) {\n  .module-row { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }\n  .module-row .mod-price { text-align: left; }\n}\n\n/* ============= Footer ============= */\n.footer {\n  background: var(--ink);\n  color: var(--paper);\n  padding: 96px 0 40px;\n}\n.footer a:hover { color: var(--tan); }\n.footer-petowner {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 40px;\n  flex-wrap: wrap;\n  padding-bottom: 52px;\n  margin-bottom: 56px;\n  border-bottom: 1px solid rgba(244,239,229,0.18);\n}\n.footer-grid {\n  display: grid;\n  grid-template-columns: 1.6fr 1fr 1fr 1fr;\n  gap: 56px;\n}\n@media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }\n.footer-col h4 {\n  font-size: 11px;\n  letter-spacing: 0.22em;\n  text-transform: uppercase;\n  color: var(--tan);\n  margin-bottom: 22px;\n  font-weight: 500;\n}\n.footer-col ul li { padding: 5px 0; font-size: 15px; color: rgba(244,239,229,0.78); }\n.footer-bottom {\n  margin-top: 80px;\n  padding-top: 32px;\n  border-top: 1px solid rgba(244,239,229,0.18);\n  display: flex;\n  justify-content: space-between;\n  font-size: 12px;\n  color: rgba(244,239,229,0.6);\n  gap: 24px;\n  flex-wrap: wrap;\n}\n\n/* ============= Page hero ============= */\n.page-hero {\n  padding-top: 80px;\n  padding-bottom: 100px;\n  border-bottom: 1px solid var(--rule);\n}\n\n/* ============= Backgrounds ============= */\n.bg-ink { background: var(--ink); color: var(--paper); }\n.bg-ink .eyebrow { color: var(--tan); }\n.bg-forest { background: var(--forest); color: var(--paper); }\n.bg-cream { background: var(--cream); }\n.bg-paper-deep { background: var(--paper-deep); }\n\n/* Hero reveal — CSS-only, bulletproof */\n.hero-name {\n  opacity: 0;\n  transform: translateY(20px);\n  animation: heroIn 1.1s cubic-bezier(0.2,0.7,0.2,1) 0.15s forwards;\n}\n.hero-name .line-2 {\n  display: inline-block;\n  opacity: 0;\n  transform: translateY(20px);\n  animation: heroIn 1.1s cubic-bezier(0.2,0.7,0.2,1) 0.35s forwards;\n}\n.hero-lede {\n  opacity: 0;\n  transform: translateY(16px);\n  animation: heroIn 0.9s cubic-bezier(0.2,0.7,0.2,1) 0.55s forwards;\n}\n.hero-ctas {\n  opacity: 0;\n  transform: translateY(16px);\n  animation: heroIn 0.9s cubic-bezier(0.2,0.7,0.2,1) 0.7s forwards;\n}\n.hero-eyebrow {\n  opacity: 0;\n  animation: heroIn 0.6s ease 0s forwards;\n}\n@keyframes heroIn {\n  to { opacity: 1; transform: translateY(0); }\n}\n@media (prefers-reduced-motion: reduce) {\n  .hero-name, .hero-name .line-2, .hero-lede, .hero-ctas, .hero-eyebrow { animation: none; opacity: 1; transform: none; }\n}\n\n/* ============= Anim helpers ============= */\n.fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }\n.fade-up.in { opacity: 1; transform: translateY(0); }\n\n/* Split-text — staggered word reveal */\n.split-word {\n  display: inline-block;\n  opacity: 0;\n  transform: translateY(60%) skewY(4deg);\n  transition: opacity 0.9s cubic-bezier(0.2,0.7,0.2,1), transform 0.9s cubic-bezier(0.2,0.7,0.2,1);\n}\n.split-word.in { opacity: 1; transform: translateY(0) skewY(0); }\n.split-mask { display: inline-block; overflow: hidden; padding-bottom: 0.08em; line-height: inherit; vertical-align: bottom; }\n\n/* Hero ken-burns drift */\n@keyframes drift {\n  0%   { transform: scale(1.04) translate(0,0); }\n  50%  { transform: scale(1.07) translate(-1.2%, -1%); }\n  100% { transform: scale(1.04) translate(0,0); }\n}\n.hero-portrait { animation: drift 24s ease-in-out infinite; }\n\n/* Marquee */\n.marquee {\n  overflow: hidden;\n  border-top: 1px solid var(--rule);\n  border-bottom: 1px solid var(--rule);\n  background: var(--paper);\n  padding: 20px 0;\n  white-space: nowrap;\n}\n.marquee-track {\n  display: inline-flex;\n  gap: 64px;\n  animation: marquee 48s linear infinite;\n  padding-left: 64px;\n  will-change: transform;\n}\n.marquee-item {\n  font-family: var(--serif);\n  font-size: clamp(22px, 1.8vw, 28px);\n  font-style: italic;\n  color: var(--ink);\n  display: inline-flex;\n  align-items: center;\n  gap: 64px;\n}\n.marquee-item::after {\n  content: '✦';\n  color: var(--clay);\n  font-style: normal;\n  font-size: 0.7em;\n}\n@keyframes marquee {\n  0%   { transform: translateX(0); }\n  100% { transform: translateX(-50%); }\n}\n\n/* Practice card hover */\n.practice-card {\n  position: relative;\n  overflow: hidden;\n  transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1);\n}\n.practice-card::after {\n  content: '';\n  position: absolute;\n  left: 0; right: 0; bottom: 0;\n  height: 3px;\n  background: var(--clay);\n  transform: scaleX(0);\n  transform-origin: left;\n  transition: transform 0.5s cubic-bezier(0.2,0.7,0.2,1);\n}\n.practice-card:hover { transform: translateY(-4px); }\n.practice-card:hover::after { transform: scaleX(1); }\n\n/* Region hover fill */\n.region-list .reg {\n  position: relative;\n  overflow: hidden;\n}\n.region-list .reg::before {\n  content: '';\n  position: absolute;\n  left: 0; right: 0; top: 100%;\n  height: 100%;\n  background: var(--ink);\n  transition: top 0.45s cubic-bezier(0.2,0.7,0.2,1);\n  z-index: 0;\n}\n.region-list .reg:hover { background: transparent; }\n.region-list .reg:hover::before { top: 0; }\n.region-list .reg > * { position: relative; z-index: 1; }\n.region-list .reg:hover { color: var(--paper); }\n.region-list .reg:hover .reg-num { color: var(--clay); }\n.region-list .reg:hover .reg-sub { color: var(--ink-4); }\n\n/* Nav link underline animation */\n.nav-links a {\n  position: relative;\n}\n.nav-links a::after {\n  content: '';\n  position: absolute;\n  left: 0; right: 0; bottom: 0;\n  height: 1px;\n  background: var(--clay);\n  transform: scaleX(0);\n  transform-origin: right;\n  transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1);\n}\n.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); transform-origin: left; }\n.nav-links a, .nav-links a.active { border-bottom: none !important; }\n\n/* Btn hover micro-motion */\n.btn { transition: background 0.25s, color 0.25s, transform 0.25s cubic-bezier(0.2,0.7,0.2,1); }\n.btn:hover { transform: translateY(-1px); }\n.btn .arrow { transition: transform 0.25s cubic-bezier(0.2,0.7,0.2,1); }\n.btn:hover .arrow { transform: translate(3px, -1px); }\n\n/* Subtle eyebrow dot pulse */\n.eyebrow-dot {\n  display: inline-block;\n  width: 6px; height: 6px;\n  background: var(--clay);\n  border-radius: 50%;\n  margin-right: 10px;\n  vertical-align: 1px;\n  box-shadow: 0 0 0 0 var(--clay);\n  animation: dot-pulse 2.6s ease-out infinite;\n}\n@keyframes dot-pulse {\n  0%   { box-shadow: 0 0 0 0 rgba(177,106,72,0.55); }\n  70%  { box-shadow: 0 0 0 10px rgba(177,106,72,0); }\n  100% { box-shadow: 0 0 0 0 rgba(177,106,72,0); }\n}\n\n/* Stats count container */\n.stat-num {\n  display: inline-block;\n  font-variant-numeric: tabular-nums;\n}\n\n/* Section head label slight in */\n.section-head .label .eyebrow {\n  position: relative;\n  padding-left: 28px;\n}\n.section-head .label .eyebrow::before {\n  content: '';\n  position: absolute;\n  left: 0; top: 50%;\n  width: 18px; height: 1px;\n  background: var(--clay);\n}\n\n/* Reduce motion preference */\n@media (prefers-reduced-motion: reduce) {\n  .hero-portrait { animation: none; }\n  .marquee-track { animation: none; }\n  .split-word { transition-duration: 0.3s !important; }\n  .eyebrow-dot { animation: none; }\n}\n\n/* ============= Network Map ============= */\n.map-wrap {\n  position: relative;\n  background: var(--paper);\n  border-top: 1px solid var(--ink);\n  border-bottom: 1px solid var(--ink);\n  overflow: hidden;\n}\n.map-svg {\n  display: block;\n  width: 100%;\n  height: 100%;\n  background: var(--paper);\n}\n\n/* .map-zoom — transform is driven by requestAnimationFrame via SVG attribute.\n   Don't apply CSS transform here; it doesn't work on <g> in some browsers. */\n.map-zoom { will-change: transform; }\n/* When zoomed, the path layer is purely decorative — let pointer events fall through */\n.map-zoom.is-zoomed .country-path { pointer-events: none; }\n\n/* Markers transition smoothly. Use longer duration matching the camera. */\n.marker .marker-dot,\n.marker .marker-ring,\n.marker .marker-hit,\n.marker .marker-pulse {\n  transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;\n}\n/* All non-focused markers shrink + dim while zoomed so the target is hero. */\n.map-zoom.is-zoomed .marker:not(.focused) .marker-dot {\n  transform: scale(0.28);\n  opacity: 0.32;\n}\n.map-zoom.is-zoomed .marker:not(.focused) .marker-ring {\n  transform: scale(0.28);\n  opacity: 0.18;\n}\n.map-zoom.is-zoomed .marker:not(.focused) .marker-hit {\n  transform: scale(0.4);\n}\n.map-zoom.is-zoomed .marker:not(.focused) .marker-pulse {\n  opacity: 0;\n}\n/* Focused marker pops + glows */\n.map-zoom.is-zoomed .marker.focused .marker-dot {\n  transform: scale(1);\n  filter: drop-shadow(0 0 6px rgba(177,106,72,0.7));\n}\n.map-zoom.is-zoomed .marker.focused .marker-ring {\n  transform: scale(1.2);\n  opacity: 1;\n  stroke-width: 1.4;\n}\n.map-zoom.is-zoomed .marker.focused .marker-hit {\n  transform: scale(2);\n}\n.map-zoom.is-zoomed .marker.focused .marker-pulse {\n  transform: scale(1);\n  transform-origin: center;\n  transform-box: fill-box;\n}\n.map-zoom.is-zoomed .marker.primary.focused .marker-dot {\n  transform: scale(0.7);\n}\n.map-zoom.is-zoomed .marker.primary.focused .marker-ring {\n  transform: scale(0.9);\n}\n\n.country-path {\n  fill: var(--paper-deep);\n  stroke: var(--paper);\n  stroke-width: 0.6;\n  vector-effect: non-scaling-stroke;\n  transition: fill 0.2s ease;\n}\n.country-path.has-clinic {\n  fill: #DBD3BB;\n}\n.country-path.is-primary {\n  fill: #C7B98F;\n}\n.country-path.is-hover {\n  fill: var(--clay) !important;\n  fill-opacity: 0.6;\n}\n\n.marker {\n  cursor: pointer;\n  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);\n  transform-origin: center;\n  transform-box: fill-box;\n}\n.marker-ring {\n  fill: none;\n  stroke: var(--clay);\n  stroke-width: 1;\n  transform-origin: center;\n  transform-box: fill-box;\n  opacity: 0.6;\n  pointer-events: none;\n}\n.marker-dot {\n  fill: var(--clay);\n  stroke: var(--paper);\n  stroke-width: 1.6;\n  transform-origin: center;\n  transform-box: fill-box;\n  pointer-events: none;\n}\n.marker-pulse { pointer-events: none; }\n.marker-hit {\n  fill: transparent;\n  pointer-events: all;\n  transform-origin: center;\n  transform-box: fill-box;\n}\n.marker.primary .marker-dot {\n  fill: var(--ink);\n  stroke: var(--clay);\n  stroke-width: 2.4;\n  filter: drop-shadow(0 1.5px 3px rgba(24,33,28,0.55));\n}\n.marker.primary .marker-ring {\n  stroke: var(--ink);\n  stroke-width: 1.6;\n  opacity: 0.7;\n}\n.marker.graduate .marker-dot {\n  fill: var(--sage);\n  stroke: var(--paper);\n  stroke-width: 1.4;\n}\n.marker.graduate .marker-ring {\n  stroke: var(--sage);\n  opacity: 0.45;\n}\n.marker:hover .marker-dot, .marker.selected .marker-dot {\n  transform: scale(1.4);\n}\n.marker:hover .marker-ring, .marker.selected .marker-ring {\n  transform: scale(1.6);\n  opacity: 0.85;\n}\n/* Marker pulse */\n@keyframes marker-pulse {\n  0%   { r: 7; opacity: 0.75; }\n  100% { r: 26; opacity: 0; }\n}\n.marker-pulse {\n  fill: none;\n  stroke: var(--clay);\n  stroke-width: 1.4;\n  animation: marker-pulse 2.4s ease-out infinite;\n  pointer-events: none;\n}\n.marker.primary .marker-pulse {\n  stroke: var(--ink);\n  stroke-width: 1.8;\n}\n\n/* Tooltip */\n.map-tip {\n  position: absolute;\n  background: var(--ink);\n  color: var(--paper);\n  padding: 12px 16px;\n  pointer-events: none;\n  z-index: 5;\n  transform: translate(12px, -50%);\n  max-width: 280px;\n  box-shadow: 0 12px 28px -8px rgba(24,33,28,0.5);\n  font-size: 13px;\n  line-height: 1.4;\n  border-left: 3px solid var(--clay);\n}\n.map-tip .tip-name { font-family: var(--serif); font-size: 18px; line-height: 1.15; color: var(--paper); margin-bottom: 6px; }\n.map-tip .tip-loc { color: var(--tan); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }\n\n/* Close-zoom button */\n.map-close-zoom {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 16px;\n  background: var(--paper);\n  border: 1px solid var(--ink);\n  color: var(--ink);\n  font-size: 11px;\n  letter-spacing: 0.16em;\n  text-transform: uppercase;\n  font-weight: 500;\n  cursor: pointer;\n  box-shadow: 0 8px 22px -10px rgba(24,33,28,0.35);\n  z-index: 6;\n  transition: background 0.2s, color 0.2s;\n  font-family: var(--sans);\n}\n.map-close-zoom span { font-size: 14px; line-height: 1; }\n.map-close-zoom:hover { background: var(--ink); color: var(--paper); }\n\n/* Legend */\n.map-legend {\n  display: flex; gap: 24px;\n  align-items: center;\n  padding: 16px 0;\n  font-size: 13px;\n  color: var(--ink-3);\n}\n.map-legend .lg-dot {\n  display: inline-block;\n  width: 10px; height: 10px; border-radius: 50%;\n  margin-right: 8px;\n  vertical-align: -1px;\n}\n.map-legend .lg-dot.primary { background: var(--ink); border: 2px solid var(--clay); }\n.map-legend .lg-dot.trained { background: var(--clay); border: 1px solid var(--paper); }\n.map-legend .lg-dot.graduate { background: var(--sage); border: 1px solid var(--paper); }\n.map-legend .lg-tint {\n  display: inline-block;\n  width: 16px; height: 10px;\n  margin-right: 8px;\n  vertical-align: -1px;\n  background: #DBD3BB;\n}\n\n/* Detail card */\n.map-detail {\n  background: var(--ink);\n  color: var(--paper);\n  padding: 36px 40px;\n  display: grid;\n  grid-template-columns: 80px 1fr 1fr 200px;\n  gap: 36px;\n  align-items: start;\n}\n.map-detail .md-num {\n  font-family: var(--serif);\n  font-size: 48px;\n  line-height: 1;\n  color: var(--clay);\n  letter-spacing: -0.02em;\n}\n.map-detail .md-name {\n  font-family: var(--serif);\n  font-size: 30px;\n  line-height: 1.1;\n  letter-spacing: -0.012em;\n  color: var(--paper);\n}\n.map-detail .md-eb {\n  font-size: 11px;\n  letter-spacing: 0.22em;\n  color: var(--tan);\n  text-transform: uppercase;\n  margin-bottom: 6px;\n  font-weight: 500;\n}\n.map-detail a { color: var(--tan); border-bottom: 1px solid rgba(244,239,229,0.3); transition: color 0.2s, border-color 0.2s; }\n.map-detail a:hover { color: var(--paper); border-bottom-color: var(--paper); }\n.map-detail .md-name-link {\n  color: var(--paper);\n  border-bottom: none;\n  transition: color 0.2s;\n}\n.map-detail .md-name-link:hover { color: var(--clay); border-bottom: none; }\n@media (max-width: 900px) {\n  .map-detail { grid-template-columns: 1fr; gap: 18px; padding: 28px 24px; }\n  .map-detail .md-num { font-size: 32px; }\n}\n\n/* Clinic list */\n.clinic-list {\n  border-top: 1px solid var(--ink);\n}\n.clinic-row {\n  display: grid;\n  grid-template-columns: 50px 1.4fr 1.1fr 1fr 130px;\n  gap: 24px;\n  padding: 24px 0;\n  border-bottom: 1px solid var(--rule);\n  align-items: center;\n  cursor: pointer;\n  transition: padding 0.25s, background 0.25s;\n}\n.clinic-row:hover, .clinic-row.active {\n  padding-left: 12px;\n  background: rgba(177,106,72,0.05);\n}\n.clinic-row .cr-num {\n  font-size: 11px;\n  letter-spacing: 0.18em;\n  color: var(--ink-3);\n  font-weight: 500;\n}\n.clinic-row .cr-name {\n  font-family: var(--serif);\n  font-size: 24px;\n  line-height: 1.1;\n  letter-spacing: -0.01em;\n}\n.clinic-row.active .cr-name { color: var(--clay); }\n.clinic-row .cr-loc {\n  font-size: 14px;\n  color: var(--ink-3);\n}\n.clinic-row .cr-clinic {\n  font-size: 14px;\n  color: var(--ink-2);\n}\n.clinic-row .cr-link {\n  color: var(--ink-2);\n  border-bottom: 1px solid transparent;\n  transition: color 0.2s, border-color 0.2s;\n}\n.clinic-row .cr-link:hover {\n  color: var(--clay);\n  border-bottom-color: var(--clay);\n}\n.clinic-row .cr-link-arrow {\n  font-size: 11px;\n  color: var(--ink-3);\n  margin-left: 2px;\n  transition: color 0.2s, transform 0.2s;\n  display: inline-block;\n}\n.clinic-row .cr-link:hover .cr-link-arrow {\n  color: var(--clay);\n  transform: translate(2px, -2px);\n}\n.clinic-row .cr-tag {\n  font-size: 10px;\n  letter-spacing: 0.18em;\n  text-transform: uppercase;\n  color: var(--clay);\n  text-align: right;\n  font-weight: 500;\n}\n.clinic-row.primary .cr-tag { color: var(--ink); }\n.clinic-row.graduate .cr-tag { color: var(--sage-deep); }\n@media (max-width: 900px) {\n  .clinic-row { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }\n  .clinic-row .cr-tag { text-align: left; }\n}\n\n/* Filter chips */\n.chip-row {\n  display: flex; gap: 10px; flex-wrap: wrap;\n  margin-bottom: 32px;\n}\n.chip {\n  padding: 10px 18px;\n  border: 1px solid var(--rule-2);\n  background: var(--paper);\n  font-size: 13px;\n  letter-spacing: 0.04em;\n  color: var(--ink-2);\n  cursor: pointer;\n  transition: background 0.2s, color 0.2s, border-color 0.2s;\n}\n.chip:hover { border-color: var(--ink); }\n.chip.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }\n\n/* Map view tab toggle */\n.map-tab {\n  padding: 10px 22px;\n  font-size: 12px;\n  letter-spacing: 0.08em;\n  color: var(--ink);\n  background: var(--paper);\n  border: none;\n  cursor: pointer;\n  font-weight: 500;\n  transition: background 0.2s, color 0.2s;\n}\n.map-tab + .map-tab { border-left: 1px solid var(--ink); }\n.map-tab[data-active=\"true\"] { background: var(--ink); color: var(--paper); }\n.map-tab:hover[data-active=\"false\"], .map-tab:hover:not([data-active=\"true\"]) { background: rgba(24,33,28,0.06); }\n\n/* Map loading state */\n.map-loading {\n  height: 600px;\n  display: flex; align-items: center; justify-content: center;\n  font-family: var(--serif); font-size: 22px; color: var(--ink-3);\n  font-style: italic;\n}\n.map-loading::before {\n  content: '';\n  width: 24px; height: 24px;\n  border: 2px solid var(--rule-2);\n  border-top-color: var(--clay);\n  border-radius: 50%;\n  margin-right: 14px;\n  animation: spin 0.9s linear infinite;\n}\n@keyframes spin { to { transform: rotate(360deg); } }";
   var st=document.createElement('style');st.textContent=__css;document.head.appendChild(st);
-  var lk=document.createElement('link');lk.rel='stylesheet';lk.href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Dancing+Script:wght@500;600;700&display=swap";document.head.appendChild(lk);
+  var lk=document.createElement('link');lk.rel='stylesheet';lk.href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Dancing+Script:wght@500;600;700&family=Great+Vibes&display=swap";document.head.appendChild(lk);
+  window.useTweaks=window.useTweaks||function(d){return [d,function(){}];};
+  ['TweaksPanel','TweakSection','TweakRow','TweakSlider','TweakToggle','TweakRadio','TweakSelect','TweakText','TweakNumber','TweakColor','TweakButton'].forEach(function(k){ window[k]=window[k]||function(){return null;}; });
   (function(){
 /* global React, ReactDOM */
 const {
@@ -481,7 +483,7 @@ function Home() {
     current: "home"
   }), /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(window.Marquee, {
     items: ['Diagnostic MSK Ultrasound', 'Sports Medicine', 'Regenerative Guidance', 'Canine Rehabilitation', 'Remote-read Consultation', 'Continuing Education', 'Diplomate · ACVSMR']
-  }), /*#__PURE__*/React.createElement(Practice, null), /*#__PURE__*/React.createElement(Regions, null), /*#__PURE__*/React.createElement(Course, null), /*#__PURE__*/React.createElement(Visit, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(Practice, null), /*#__PURE__*/React.createElement(Regions, null), /*#__PURE__*/React.createElement(Course, null), /*#__PURE__*/React.createElement(Visit, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 
 /* ============================================================
@@ -596,7 +598,7 @@ function Practice() {
       color: 'var(--ink-2)',
       maxWidth: 480
     }
-  }, "On-site diagnostic MSK ultrasound, regenerative medicine guidance, and rehabilitation \u2014 for the cases you'd otherwise refer out."), /*#__PURE__*/React.createElement("div", {
+  }, "On-site diagnostic MSK ultrasound, regenerative medicine and rehabilitation guidance \u2014 for the cases you'd otherwise refer out."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 36
     }
@@ -632,7 +634,7 @@ function Practice() {
       color: 'rgba(244,239,229,0.78)',
       maxWidth: 480
     }
-  }, "The Canine MSK Ultrasound curriculum \u2014 self-paced lectures, graded homework, and remote-read access. Built by the practitioner you'd ask for the read anyway."), /*#__PURE__*/React.createElement("div", {
+  }, "The Canine MSK Ultrasound curriculum \u2014 self-paced lectures, graded homework, and remote-read access."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 36
     }
@@ -659,27 +661,25 @@ function Regions() {
     name: 'Shoulder',
     areas: ['Biceps', 'Supraspinatus']
   }, {
-    name: 'Elbow',
-    areas: ['Medial compartment']
-  }, {
     name: 'Iliopsoas',
-    areas: ['Strain', 'Enthesopathy']
+    areas: ['Muscle belly', 'Myotendinous junction']
   }, {
     name: 'Stifle',
     areas: ['Cruciate', 'Meniscus']
   }, {
     name: 'Tarsus',
-    areas: ['Achilles complex']
+    areas: ['Achilles complex', 'Gastrocnemius']
   }, {
     name: 'Carpus',
-    areas: ['Hyperextension']
+    areas: ['Flexor tendons', 'Extensor tendons']
   }];
   return /*#__PURE__*/React.createElement("section", {
     className: "section-pad bg-cream",
+    id: "regions-section",
     "data-screen-label": "Regions"
   }, /*#__PURE__*/React.createElement("div", {
     className: "container"
-  }, /*#__PURE__*/React.createElement(window.SectionHead, {
+  }, /*#__PURE__*/React.createElement("style", null, `#regions-section .section-head .label { padding-top: 0; }`), /*#__PURE__*/React.createElement(window.SectionHead, {
     label: "The Curriculum"
   }, /*#__PURE__*/React.createElement("div", {
     className: "fade-up"
@@ -689,12 +689,12 @@ function Regions() {
       maxWidth: 900,
       textWrap: 'balance'
     }
-  }, "Six anatomical regions. One probe. Your trained eye."))), /*#__PURE__*/React.createElement("div", {
+  }, "Five anatomical regions. One probe. Your trained eye."))), /*#__PURE__*/React.createElement("div", {
     className: "region-list"
   }, regions.map((r, i) => /*#__PURE__*/React.createElement("a", {
     key: r.name,
     className: "reg",
-    href: `/course#${r.name.toLowerCase()}`
+    href: `course.html#${r.name.toLowerCase()}`
   }, /*#__PURE__*/React.createElement("span", {
     className: "reg-num"
   }, "0", i + 1), /*#__PURE__*/React.createElement("span", {
@@ -742,7 +742,7 @@ function Course() {
       marginTop: 24,
       maxWidth: 540
     }
-  }, "A self-paced online curriculum across six anatomical regions, with homework graded personally by Dr. Canapp. Course materials are yours for 12 months from enrollment, with the option to extend access in 3- or 6-month intervals."), /*#__PURE__*/React.createElement("div", {
+  }, "A self-paced online curriculum across five anatomical regions, with homework graded personally by Dr. Canapp. Course materials are yours for 12 months from enrollment, with the option to extend access in 3- or 6-month intervals."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 40,
       display: 'flex',
@@ -755,7 +755,7 @@ function Course() {
   }, "Explore the course ", /*#__PURE__*/React.createElement("span", {
     className: "arrow"
   }, "\u2192")), /*#__PURE__*/React.createElement("a", {
-    href: "/course#pricing",
+    href: "course.html#pricing",
     className: "btn btn-ghost",
     style: {
       borderColor: 'rgba(244,239,229,0.4)',
@@ -826,7 +826,7 @@ function Visit() {
       marginTop: 24,
       maxWidth: 580
     }
-  }, "Dr. Canapp travels to clinics and teaching engagements internationally. The fastest path to a conversation is email, or through the contact form on this site."), /*#__PURE__*/React.createElement("div", {
+  }, "Dr. Canapp travels to clinics and teaching engagements internationally. The fastest path to a conversation is email."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 40,
       display: 'flex',
@@ -834,14 +834,14 @@ function Visit() {
       flexWrap: 'wrap'
     }
   }, /*#__PURE__*/React.createElement("a", {
-    href: "mailto:info@drdebracanapp.com",
+    href: "mailto:info@drdebracanapp.com?subject=Course%20inquiry",
     className: "btn"
   }, "Email ", /*#__PURE__*/React.createElement("span", {
     className: "arrow"
   }, "\u2192")), /*#__PURE__*/React.createElement("a", {
-    href: "#contact-form",
+    href: "mailto:info@drdebracanapp.com?subject=Lecture%20invitation",
     className: "btn btn-ghost"
-  }, "Contact form"))), /*#__PURE__*/React.createElement("div", {
+  }, "Lecture invitations"))), /*#__PURE__*/React.createElement("div", {
     style: {
       borderLeft: '1px solid var(--rule)',
       paddingLeft: 40
@@ -883,7 +883,7 @@ function ServicesPage() {
     ref: ref
   }, /*#__PURE__*/React.createElement(window.Nav, {
     current: "services"
-  }), /*#__PURE__*/React.createElement(ServicesHero, null), /*#__PURE__*/React.createElement(window.PetOwnerNote, null), /*#__PURE__*/React.createElement(TwoModes, null), /*#__PURE__*/React.createElement(ServicesGrid, null), /*#__PURE__*/React.createElement(RegenerativeSpread, null), /*#__PURE__*/React.createElement(SubmissionProcess, null), /*#__PURE__*/React.createElement(OutsideReferralFees, null), /*#__PURE__*/React.createElement(OnSiteVisits, null), /*#__PURE__*/React.createElement(ServicesCTA, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(ServicesHero, null), /*#__PURE__*/React.createElement(window.PetOwnerNote, null), /*#__PURE__*/React.createElement(TwoModes, null), /*#__PURE__*/React.createElement(ServicesGrid, null), /*#__PURE__*/React.createElement(RegenerativeSpread, null), /*#__PURE__*/React.createElement(SubmissionProcess, null), /*#__PURE__*/React.createElement(OutsideReferralFees, null), /*#__PURE__*/React.createElement(OnSiteVisits, null), /*#__PURE__*/React.createElement(ServicesCTA, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 
 /* ============================================================
@@ -1210,7 +1210,7 @@ function ServicesGrid() {
   }, {
     num: '02',
     t: 'Ultrasound-Guided Injection',
-    d: 'PRP, stem cell, hyaluronic acid, and steroid placement guided by real-time ultrasound — precision into the lesion, not near it. Performed in person at referral sites.',
+    d: 'PRP, regenerative medicine, orthobiologics, and intra-articular injection placement guided by real-time ultrasound — precision into the lesion, not near it. Performed in person at referral sites.',
     tag: 'Therapeutic'
   }, {
     num: '03',
@@ -1220,7 +1220,7 @@ function ServicesGrid() {
   }, {
     num: '04',
     t: 'Second-Opinion Imaging Reads',
-    d: 'Submit your MSK ultrasound, CT, or MRI imaging through the portal for expert interpretation, with a written report and annotated key frames.',
+    d: 'Submit your MSK ultrasound imaging through the portal for expert interpretation, with a written report and annotated key frames.',
     tag: 'Consultation'
   }];
   return /*#__PURE__*/React.createElement("section", {
@@ -1337,7 +1337,7 @@ function RegenerativeSpread() {
       marginTop: 32,
       maxWidth: 600
     }
-  }, "The diagnostic edge converts directly to a therapeutic one. Ultrasound guidance lets PRP, stem cell, and regenerative protocols land inside the lesion \u2014 not near it. The same modality that found the injury is the one that delivers the treatment."), /*#__PURE__*/React.createElement("div", {
+  }, "The diagnostic edge converts directly to a therapeutic one. Ultrasound guidance lets PRP, orthobiologic, and regenerative protocols land inside the lesion \u2014 not near it. The same modality that found the injury is the one that delivers the treatment."), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 48,
       display: 'grid',
@@ -1347,9 +1347,9 @@ function RegenerativeSpread() {
   }, /*#__PURE__*/React.createElement(Pill, {
     label: "PRP placement"
   }), /*#__PURE__*/React.createElement(Pill, {
-    label: "Stem-cell injection"
+    label: "Regenerative medicine"
   }), /*#__PURE__*/React.createElement(Pill, {
-    label: "Hyaluronic acid"
+    label: "Orthobiologics"
   })), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 36
@@ -1633,7 +1633,7 @@ function SubmissionProcess() {
       flexDirection: 'column',
       gap: 14
     }
-  }, ['Written diagnostic interpretation, by anatomical region', 'Annotated key frames with measurements', 'Differential diagnosis ranked by likelihood', 'Treatment recommendations & rehabilitation framework', 'Optional follow-up call to discuss the case'].map(x => /*#__PURE__*/React.createElement("li", {
+  }, ['Written diagnostic interpretation, by anatomical region', 'Annotated key frames with measurements', 'Differential diagnosis ranked by likelihood', 'Treatment recommendations & rehabilitation framework', 'Optional follow-up through the portal\'s case comment thread'].map(x => /*#__PURE__*/React.createElement("li", {
     key: x,
     style: {
       display: 'flex',
@@ -1675,7 +1675,7 @@ function SubmissionProcess() {
       flexDirection: 'column',
       gap: 0
     }
-  }, [['Day 0', 'You upload clips via secure portal'], ['Day 1', 'Dr. Canapp triages & confirms receipt'], ['Day 3', 'Imaging reviewed; report drafted'], ['Day 4', 'Report returned to your inbox'], ['Day 5+', 'Optional follow-up call if requested']].map(([d, x], i) => /*#__PURE__*/React.createElement("div", {
+  }, [['Day 0', 'You upload clips via secure portal'], ['Day 1', 'Dr. Canapp triages & confirms receipt'], ['Day 3', 'Imaging reviewed; report drafted'], ['Day 4', 'Report returned to your inbox'], ['Day 5+', 'Comment thread stays open for case questions']].map(([d, x], i) => /*#__PURE__*/React.createElement("div", {
     key: d,
     style: {
       display: 'grid',
@@ -1859,7 +1859,7 @@ function OutsideReferralFees() {
       flexDirection: 'column',
       gap: 0
     }
-  }, [['Both shoulders', '1 site · $500'], ['Both shoulders + both elbows', '2 sites · $1,000'], ['Both stifles + both tarsi + both shoulders', '3 sites · $1,500'], ['Single unilateral region', '1 site · $500']].map(([k, v], i) => /*#__PURE__*/React.createElement("div", {
+  }, [['Both shoulders', '1 site · $500'], ['Both shoulders + both carpi', '2 sites · $1,000'], ['Both stifles + both tarsi + both shoulders', '3 sites · $1,500'], ['Single unilateral region', '1 site · $500']].map(([k, v], i) => /*#__PURE__*/React.createElement("div", {
     key: k,
     style: {
       display: 'grid',
@@ -2060,7 +2060,7 @@ function CoursePage() {
     className: "course-page"
   }, /*#__PURE__*/React.createElement(window.Nav, {
     current: "course"
-  }), /*#__PURE__*/React.createElement(CourseHero, null), /*#__PURE__*/React.createElement(CoursePromise, null), /*#__PURE__*/React.createElement(CourseCurriculum, null), /*#__PURE__*/React.createElement(CourseProcess, null), /*#__PURE__*/React.createElement(CoursePricing, null), /*#__PURE__*/React.createElement(CourseAccess, null), /*#__PURE__*/React.createElement(CourseFAQ, null), /*#__PURE__*/React.createElement(CourseEnroll, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(CourseHero, null), /*#__PURE__*/React.createElement(CoursePromise, null), /*#__PURE__*/React.createElement(CourseCurriculum, null), /*#__PURE__*/React.createElement(CourseProcess, null), /*#__PURE__*/React.createElement(CoursePricing, null), /*#__PURE__*/React.createElement(CourseAccess, null), /*#__PURE__*/React.createElement(CourseFAQ, null), /*#__PURE__*/React.createElement(CourseEnroll, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 function CourseHero() {
   return /*#__PURE__*/React.createElement("section", {
@@ -2201,10 +2201,10 @@ function CoursePromise() {
   const items = [{
     n: '01',
     t: 'Acquire diagnostic-quality images',
-    d: 'Standardized probe positioning for shoulder, elbow, iliopsoas, stifle, tarsus, and carpus. No more "I can\'t find the structure."'
+    d: 'Standardized probe positioning for shoulder, iliopsoas, stifle, tarsus, and carpus. No more "I can\'t find the structure."'
   }, {
     n: '02',
-    t: 'Read fibrillar architecture',
+    t: 'Recognize tendon & ligament injury',
     d: 'Recognize normal tendinous and ligamentous patterns — and the disruption that signals injury — at clinically useful magnification.'
   }, {
     n: '03',
@@ -2212,14 +2212,10 @@ function CoursePromise() {
     d: 'Layer-by-layer evaluation strategies that turn vague lameness into a specific, anatomically localized diagnosis.'
   }, {
     n: '04',
-    t: 'Guide regenerative therapy',
-    d: 'Use real-time ultrasound to place PRP, stem cell, and steroid injections precisely where they need to be.'
+    t: 'Qualify for remote reads',
+    d: 'Complete the modules, homework, and the remote-read qualification — then submit live cases from your own practice to Dr. Canapp for a second-opinion read. A feedback loop most CE never offers.'
   }, {
     n: '05',
-    t: 'Submit a remote read',
-    d: 'After completion, send cases to Dr. Canapp for expert second-opinion — a feedback loop most CE never offers.'
-  }, {
-    n: '06',
     t: 'Talk to clients with images',
     d: 'Sit down with the owner of an athlete and explain what you found — with the actual scan in hand.'
   }];
@@ -2242,7 +2238,7 @@ function CoursePromise() {
       maxWidth: 1100,
       textWrap: 'balance'
     }
-  }, "Six capabilities that will ", /*#__PURE__*/React.createElement("em", {
+  }, "Five capabilities that will ", /*#__PURE__*/React.createElement("em", {
     style: {
       fontWeight: 300,
       color: 'var(--ink-2)'
@@ -2250,39 +2246,48 @@ function CoursePromise() {
   }, "quietly"), " reshape how you practice."))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(3,1fr)',
+      gridTemplateColumns: 'repeat(6,1fr)',
       gap: '1px',
       background: 'var(--rule-2)',
       border: '1px solid var(--rule-2)'
     },
     className: "promise-grid"
-  }, items.map(it => /*#__PURE__*/React.createElement("div", {
-    key: it.n,
-    style: {
-      background: 'var(--paper)',
-      padding: 36,
-      position: 'relative'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "eyebrow-num",
-    style: {
-      marginBottom: 24
-    }
-  }, it.n), /*#__PURE__*/React.createElement("h3", {
-    className: "serif",
-    style: {
-      fontSize: 28,
-      lineHeight: 1.1,
-      letterSpacing: '-0.012em'
-    }
-  }, it.t), /*#__PURE__*/React.createElement("p", {
-    className: "body",
-    style: {
-      marginTop: 14,
-      color: 'var(--ink-3)'
-    }
-  }, it.d)))), /*#__PURE__*/React.createElement("style", null, `
-          @media (max-width: 900px) { .promise-grid { grid-template-columns: 1fr !important; } }
+  }, items.map((it, idx) => {
+    // 5 items → top row of 3 (span 2 each), bottom row of 2 (span 3 each).
+    // Every cell fills its row exactly, so there are no blank boxes.
+    const span = idx < 3 ? 2 : 3;
+    return /*#__PURE__*/React.createElement("div", {
+      key: it.n,
+      style: {
+        background: 'var(--paper)',
+        padding: 36,
+        position: 'relative',
+        gridColumn: `span ${span}`
+      }
+    }, /*#__PURE__*/React.createElement("div", {
+      className: "eyebrow-num",
+      style: {
+        marginBottom: 24
+      }
+    }, it.n), /*#__PURE__*/React.createElement("h3", {
+      className: "serif",
+      style: {
+        fontSize: 28,
+        lineHeight: 1.1,
+        letterSpacing: '-0.012em'
+      }
+    }, it.t), /*#__PURE__*/React.createElement("p", {
+      className: "body",
+      style: {
+        marginTop: 14,
+        color: 'var(--ink-3)'
+      }
+    }, it.d));
+  })), /*#__PURE__*/React.createElement("style", null, `
+          @media (max-width: 900px) {
+            .promise-grid { grid-template-columns: 1fr !important; }
+            .promise-grid > div { grid-column: span 1 !important; }
+          }
         `)));
 }
 
@@ -2310,7 +2315,7 @@ function CourseCurriculum() {
     id: 'iliopsoas',
     num: '03',
     name: 'Iliopsoas',
-    desc: 'Iliopsoas strain & enthesopathy — one of the most overlooked sport injuries in canine athletes.',
+    desc: 'Iliopsoas muscle belly, myotendinous junction, iliacus & psoas, lumbosacral origin.',
     meta: '18 lessons · CORE',
     price: '$1,500',
     hasHomework: '+ $500 homework'
@@ -2318,7 +2323,7 @@ function CourseCurriculum() {
     id: 'stifle',
     num: '04',
     name: 'Stifle',
-    desc: 'Patellar tendon, cruciate evaluation, meniscal interrogation, collateral ligaments.',
+    desc: 'Patellar tendon, cruciate ligaments, menisci, collateral ligaments, long digital extensor.',
     meta: '22 lessons · CORE',
     price: '$1,500',
     hasHomework: '+ $500 homework'
@@ -2326,7 +2331,7 @@ function CourseCurriculum() {
     id: 'tarsus',
     num: '05',
     name: 'Tarsus',
-    desc: 'Achilles complex, gastrocnemius, superficial digital flexor — pre-rupture detection.',
+    desc: 'Achilles complex, gastrocnemius, superficial digital flexor, common calcaneal tendon.',
     meta: '20 lessons · CORE',
     price: '$1,500',
     hasHomework: '+ $500 homework'
@@ -2334,7 +2339,7 @@ function CourseCurriculum() {
     id: 'carpus',
     num: '06',
     name: 'Carpus',
-    desc: 'Hyperextension injury, palmar carpal ligament, dorsal & medial structures.',
+    desc: 'Flexor tendons (FCU, SDF/DDF), extensor tendons, palmar carpal ligament, dorsal & medial structures.',
     meta: '22 lessons · CORE',
     price: '$1,500',
     hasHomework: '+ $500 homework'
@@ -2343,12 +2348,13 @@ function CourseCurriculum() {
     className: "section-pad",
     id: "curriculum",
     style: {
-      background: 'var(--cream)'
+      background: 'var(--cream)',
+      paddingTop: 'clamp(48px,5vw,80px)'
     },
     "data-screen-label": "Curriculum"
   }, /*#__PURE__*/React.createElement("div", {
     className: "container"
-  }, /*#__PURE__*/React.createElement(window.SectionHead, {
+  }, /*#__PURE__*/React.createElement("style", null, `#curriculum .section-head { margin-bottom: 44px; }`), /*#__PURE__*/React.createElement(window.SectionHead, {
     label: "Curriculum",
     num: "\xA7 02"
   }, /*#__PURE__*/React.createElement("div", {
@@ -2392,7 +2398,7 @@ function CourseCurriculum() {
     style: {
       color: 'var(--ink-2)'
     }
-  }, "Lectures \xB7 video labs \xB7 graded HW \xB7 remote read add-on")), /*#__PURE__*/React.createElement("div", {
+  }, "Lectures \xB7 anatomy \xB7 case studies \xB7 video labs \xB7 graded HW \xB7 remote read add-on")), /*#__PURE__*/React.createElement("div", {
     className: "mod-price"
   }, m.price, /*#__PURE__*/React.createElement("span", {
     className: "mod-hw",
@@ -2473,7 +2479,7 @@ function CourseProcess() {
   }, {
     n: '06',
     t: 'Remote reads',
-    d: 'After completion, optionally submit live cases to Dr. Canapp for a second-opinion read.',
+    d: 'Once you\'ve completed the homework and passed the remote-read qualification, you can submit live cases to Dr. Canapp for a second-opinion read.',
     icon: '✦'
   }];
   return /*#__PURE__*/React.createElement("section", {
@@ -2717,11 +2723,12 @@ function CourseAccess() {
     id: "access",
     "data-screen-label": "Access & Extensions",
     style: {
-      background: 'var(--paper-deep)'
+      background: 'var(--paper-deep)',
+      paddingTop: 'clamp(48px,5vw,80px)'
     }
   }, /*#__PURE__*/React.createElement("div", {
     className: "container"
-  }, /*#__PURE__*/React.createElement(window.SectionHead, {
+  }, /*#__PURE__*/React.createElement("style", null, `#access .section-head { margin-bottom: 44px; }`), /*#__PURE__*/React.createElement(window.SectionHead, {
     label: "Access & extensions"
   }, /*#__PURE__*/React.createElement("div", {
     className: "fade-up"
@@ -2761,7 +2768,7 @@ function CourseAccess() {
     desc: 'A longer runway — useful for residents, working clinicians, and anyone balancing the course alongside a busy practice.'
   }].map(t => /*#__PURE__*/React.createElement("a", {
     key: t.n,
-    href: `/extensions?plan=${t.n}`,
+    href: `extensions.html?plan=${t.n}`,
     style: {
       display: 'block',
       background: 'var(--cream)',
@@ -2859,7 +2866,7 @@ function CourseFAQ() {
     a: 'Each module has imaging assignments. You record your scans (DICOM clips or video), upload them through the platform, and Dr. Canapp personally reviews each submission — both your technique and your image interpretation.'
   }, {
     q: 'What is a "remote read"?',
-    a: 'After successfully completing a region\'s module + homework, you unlock the ability to submit live clinical cases from your own practice for Dr. Canapp to review and report on. It\'s second-opinion access, on demand.'
+    a: 'After successfully completing a region\'s module and homework — and passing the remote-read qualification — you unlock the ability to submit live clinical cases from your own practice for Dr. Canapp to review and report on. The qualification is required before any case can be submitted. It\'s second-opinion access, on demand.'
   }, {
     q: 'Is this appropriate for residents and specialists?',
     a: 'Yes. The course is taken regularly by sports medicine residents, rehabilitation therapists, surgeons, and general practitioners alike. The pacing accommodates a wide range of starting points.'
@@ -3053,28 +3060,28 @@ const UPCOMING = [{
   eventLong: '7th ECVSMR Scientific Meeting',
   event: 'ECVSMR 2026',
   role: 'Invited lecturer',
-  title: 'Canine Diagnostic Musculoskeletal Ultrasound — Clinical Pearls & Pitfalls',
-  location: 'Heesch / \u2019s-Hertogenbosch, Netherlands',
-  venue: 'Hooge Wijststraat 7, 5384 RC Heesch · Oude Engelenseweg 1, 5222 AA \u2019s-Hertogenbosch',
-  dateStart: 'Oct 16, 2026',
-  dateEnd: 'Oct 17, 2026',
+  title: 'Musculoskeletal Ultrasound: From Anatomy to Pathology — Going Beyond the Usual Suspects',
+  location: '\u2019s-Hertogenbosch, Netherlands',
+  venue: 'Workshop · Sporthorse Medical Diagnostic Centre · Congress · 1931 Conference Centre, \u2019s-Hertogenbosch',
+  dateStart: 'Oct 8, 2026',
+  dateEnd: 'Oct 9, 2026',
   sessions: [{
-    day: 'Day 1 · Oct 16',
-    time: '10:00 – 11:30',
-    t: 'Lecture · MSK Ultrasound: a clinical framework for the shoulder and elbow'
+    day: 'Day 1 · Oct 8',
+    time: '09:00 – 12:00',
+    t: 'Workshop · MSK ultrasound: from anatomy to pathology — going beyond the usual suspects (hands-on, small animals)'
   }, {
-    day: 'Day 1 · Oct 16',
-    time: '14:00 – 17:00',
-    t: 'Wetlab · Hands-on imaging of the canine shoulder & iliopsoas (limited seats)'
+    day: 'Day 2 · Oct 9',
+    time: '09:30 – 10:30',
+    t: 'Lecture · Seeing beneath the surface: using ultrasound to reveal hidden soft-tissue lesions'
   }, {
-    day: 'Day 2 · Oct 17',
-    time: '09:30 – 11:00',
-    t: 'Lecture · Stifle, tarsus, carpus — what ultrasound shows when films stay quiet'
+    day: 'Day 2 · Oct 9',
+    time: '15:00 – 15:30',
+    t: 'Round-table · Diagnostics in canine soft-tissue injury'
   }],
   audience: 'European College of Veterinary Sports Medicine & Rehabilitation diplomates, residents, and invited guests.',
   website: 'https://www.ecvsmr2026.com/',
-  note: 'Dr. Canapp\u2019s participation is confirmed. Final session topics, room assignments, and wetlab registration open via the ECVSMR 2026 program portal.',
-  tags: ['Lecture', 'Wetlab', 'International']
+  note: 'Dr. Canapp\u2019s participation is confirmed. The hands-on workshop runs Oct 8 at the Sporthorse Medical Diagnostic Centre; congress lectures run Oct 9 at the 1931 Conference Centre, \u2019s-Hertogenbosch. Final times and wetlab registration via the ECVSMR 2026 program portal.',
+  tags: ['Workshop', 'Lecture', 'International']
 }];
 const PAST = [{
   year: 2025,
@@ -3254,7 +3261,7 @@ const PAST = [{
 function LecturesPage() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(window.Nav, {
     current: "lectures"
-  }), /*#__PURE__*/React.createElement(LecturesHero, null), /*#__PURE__*/React.createElement(UpcomingBlock, null), /*#__PURE__*/React.createElement(PastBlock, null), /*#__PURE__*/React.createElement(BookingCTA, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(LecturesHero, null), /*#__PURE__*/React.createElement(UpcomingBlock, null), /*#__PURE__*/React.createElement(PastBlock, null), /*#__PURE__*/React.createElement(BookingCTA, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 
 /* ============================================================
@@ -3880,7 +3887,7 @@ const TOPICS = ['All', 'MSK Ultrasound', 'Iliopsoas', 'Stifle', 'Carpus', 'Tarsu
 function AchievementsPage() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(window.Nav, {
     current: "achievements"
-  }), /*#__PURE__*/React.createElement(AchievementsHero, null), /*#__PURE__*/React.createElement(ByTheNumbers, null), /*#__PURE__*/React.createElement(Publications, null), /*#__PURE__*/React.createElement(ServiceAndReview, null), /*#__PURE__*/React.createElement(RecognitionCTA, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(AchievementsHero, null), /*#__PURE__*/React.createElement(ByTheNumbers, null), /*#__PURE__*/React.createElement(Publications, null), /*#__PURE__*/React.createElement(ServiceAndReview, null), /*#__PURE__*/React.createElement(RecognitionCTA, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 
 /* ============================================================
@@ -4313,7 +4320,7 @@ const {
 function AboutPage() {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(window.Nav, {
     current: "about"
-  }), /*#__PURE__*/React.createElement(AboutHero, null), /*#__PURE__*/React.createElement(AboutBio, null), /*#__PURE__*/React.createElement(AboutTimeline, null), /*#__PURE__*/React.createElement(AboutCreds, null), /*#__PURE__*/React.createElement(AboutTeaching, null), /*#__PURE__*/React.createElement(AboutClose, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(AboutHero, null), /*#__PURE__*/React.createElement(AboutBio, null), /*#__PURE__*/React.createElement(AboutTimeline, null), /*#__PURE__*/React.createElement(AboutCreds, null), /*#__PURE__*/React.createElement(AboutTeaching, null), /*#__PURE__*/React.createElement(AboutClose, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 function AboutHero() {
   return /*#__PURE__*/React.createElement("section", {
@@ -4470,7 +4477,7 @@ function AboutBio() {
     style: {
       color: 'var(--ink-2)'
     }
-  }, "She has since continued an exclusive career working in small animal sports and rehabilitation medicine. To expand the rehabilitative services available to her patients, she became certified in traditional Chinese veterinary medicine and acupuncture in 2006, and in stem cell therapy in 2007."), /*#__PURE__*/React.createElement("p", {
+  }, "She has since continued an exclusive career working in small animal sports and rehabilitation medicine. To expand the rehabilitative services available to her patients, she became certified in traditional Chinese veterinary medicine and acupuncture in 2006, and in regenerative medicine (VetStem) in 2007."), /*#__PURE__*/React.createElement("p", {
     className: "body-large",
     style: {
       color: 'var(--ink-2)'
@@ -4494,7 +4501,7 @@ function AboutBio() {
       color: 'var(--ink)',
       maxWidth: 780
     }
-  }, "\"I gravitated toward ultrasound because it's the one modality that lets you watch the tissue you're trying to heal \u2014 in real time, while the patient is awake.\""), /*#__PURE__*/React.createElement("div", {
+  }, "\"I gravitated toward ultrasound because it's the one modality that lets you monitor the tissue you're trying to heal \u2014 in real time.\""), /*#__PURE__*/React.createElement("div", {
     className: "eyebrow",
     style: {
       marginTop: 18,
@@ -4517,7 +4524,7 @@ function AboutTimeline() {
     d: 'International Veterinary Acupuncture Society. Integrated immediately into sports medicine practice.'
   }, {
     y: '2007',
-    t: 'Certified in stem cell therapy',
+    t: 'Certified in VetStem',
     d: 'Among the early practitioners adopting regenerative medicine for canine athletes.'
   }, {
     y: '2010',
@@ -4536,7 +4543,7 @@ function AboutTimeline() {
     t: 'International lecturer',
     d: 'Begins lecturing domestically and abroad on MSK ultrasound and sports medicine — a practice that continues today.'
   }, {
-    y: '2020',
+    y: '2021',
     t: 'Online MSK ultrasound course launched',
     d: 'The Thinkific-hosted course opens to veterinarians worldwide, with personally-graded homework.'
   }, {
@@ -4640,7 +4647,7 @@ function AboutCreds() {
     items: ['Diplomate, American College of Veterinary Sports Medicine and Rehabilitation (ACVSMR)', 'Doctor of Veterinary Medicine (DVM)']
   }, {
     label: 'Specialty certifications',
-    items: ['Certified Canine Rehabilitation Therapist (CCRT)', 'Certified Veterinary Acupuncture, IVAS (CVA)', 'Stem Cell Therapy Certification', 'Diagnostic Musculoskeletal Ultrasound, advanced training']
+    items: ['Certified Canine Rehabilitation Therapist (CCRT)', 'Certified Veterinary Acupuncture, IVAS (CVA)', 'VetStem Regenerative Medicine Certification', 'Diagnostic Musculoskeletal Ultrasound, advanced training']
   }, {
     label: 'Professional activity',
     items: ['International lecturer · 20+ years', 'Peer reviewer · scientific veterinary journals', 'Grant committee reviewer', 'Clinical trials investigator · sports medicine & rehabilitation']
@@ -4792,9 +4799,12 @@ function AboutClose() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "script",
     style: {
-      fontSize: 'clamp(56px,7vw,120px)',
-      color: 'var(--clay)',
-      lineHeight: 1.05
+      fontFamily: "'Great Vibes', cursive",
+      fontWeight: 400,
+      fontSize: 'clamp(60px,8vw,128px)',
+      color: 'var(--tan)',
+      lineHeight: 1.05,
+      letterSpacing: '0.012em'
     }
   }, "Debra Canapp"), /*#__PURE__*/React.createElement("div", {
     className: "eyebrow",
@@ -4867,7 +4877,7 @@ function ExtensionsPage() {
     onPaid: () => setStep('paid')
   }) : /*#__PURE__*/React.createElement(Receipt, {
     plan: plan
-  }), /*#__PURE__*/React.createElement(FAQBlock, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(FAQBlock, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 
 /* ============================================================
@@ -5668,7 +5678,7 @@ const CLINICS = [{
   phone: '+1 (206) 706-7800',
   tag: 'Trained & Endorsed',
   note: 'Seattle\'s first veterinary rehabilitation specialist practice. Dr. Lamb trained under Drs. Sherman and Deb Canapp in advanced MSK ultrasound and needle arthroscopy.',
-  specialties: ['MSK Ultrasound', 'Needle Arthroscopy', 'Stem Cell', 'PRP']
+  specialties: ['MSK Ultrasound', 'Needle Arthroscopy', 'Regenerative Medicine', 'PRP']
 }, {
   id: 'az-thrive',
   type: 'trained',
@@ -5777,6 +5787,24 @@ const CLINICS = [{
   tag: 'Trained & Endorsed',
   note: 'Trained by Dr. Canapp in diagnostic MSK ultrasound and eligible to submit cases for remote-read interpretation.',
   specialties: ['MSK Ultrasound']
+}, {
+  id: 'ca-pointseastwest',
+  type: 'trained',
+  name: 'Dr. David Lane, DVM, DACVSMR',
+  creds: 'DACVSMR · CVSMT · CCRT · CVA',
+  clinic: 'Points East West Veterinary Services',
+  city: 'Squamish',
+  region: 'British Columbia',
+  country: 'Canada',
+  countryId: 124,
+  stateFips: null,
+  lat: 49.70,
+  lng: -123.16,
+  website: 'https://www.pointseastwest.com/',
+  phone: null,
+  tag: 'Trained & Endorsed',
+  note: 'Diplomate of the American College of Veterinary Sports Medicine & Rehabilitation running a dedicated sports-medicine and rehabilitation practice in Squamish, BC. Certified in canine diagnostic MSK ultrasound and qualified to submit remote reads to Dr. Canapp.',
+  specialties: ['MSK Ultrasound', 'Sports Medicine', 'Rehab', 'Remote Reads']
 }, {
   id: 'us-animalia',
   type: 'graduate',
@@ -5908,7 +5936,7 @@ function NetworkPage() {
     setSelected: setSelected,
     filter: filter,
     setFilter: setFilter
-  }), /*#__PURE__*/React.createElement(ApplyBlock, null), /*#__PURE__*/React.createElement(window.Footer, null));
+  }), /*#__PURE__*/React.createElement(ApplyBlock, null), /*#__PURE__*/React.createElement(window.Footer, null), /*#__PURE__*/React.createElement(window.TweaksRoot, null));
 }
 
 /* ============================================================
