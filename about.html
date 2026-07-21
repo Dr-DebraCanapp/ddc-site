@@ -50,6 +50,21 @@
 .teach .trow .v{font-family:var(--serif);font-size:18px;line-height:1.3;}
 @media (max-width:1000px){.teach .grid{grid-template-columns:1fr;gap:44px;}}
 @media (max-width:700px){.teach .trow{grid-template-columns:1fr;gap:6px;}}
+/* legacy — mother & daughter */
+.legacy{background:var(--cream);}
+.legacy .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,80px);align-items:center;}
+.legacy .photo{border:1px solid var(--ink);}
+.legacy .photo img{width:100%;display:block;filter:saturate(0.97);}
+.legacy .photo .plate{background:var(--ink);color:var(--paper);padding:16px 22px;display:flex;justify-content:space-between;align-items:baseline;}
+.legacy .photo .plate .sig{font-family:'Great Vibes',cursive;color:var(--tan);font-size:26px;line-height:1;}
+.legacy .photo .plate .cap{font-family:var(--mono);font-size:9.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,229,0.6);margin-top:6px;}
+.legacy .photo .plate .no{font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--clay);}
+.legacy .copy p{font-size:17.5px;line-height:1.7;color:var(--ink-2);margin:22px 0 0;max-width:640px;}
+.legacy .copy p em{font-style:italic;}
+.legacy .signoff{margin-top:30px;padding-top:26px;border-top:1px solid var(--rule-2);}
+.legacy .signoff .name{font-family:'Great Vibes',cursive;font-size:44px;color:var(--clay);line-height:1;}
+.legacy .signoff .role{font-family:var(--mono);font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);margin-top:10px;}
+@media (max-width:1000px){.legacy .grid{grid-template-columns:1fr;gap:40px;}}
 /* close */
 .close{text-align:center;}
 .close .sig{font-family:'Great Vibes',cursive;font-size:clamp(60px,8vw,128px);color:var(--tan);line-height:1.05;letter-spacing:0.012em;}
@@ -70,7 +85,7 @@
       <a href="index.html">Home</a><a href="services.html">Services</a><a href="course.html">Course</a><a href="network.html">Network</a><a href="lectures.html">Lectures</a><a href="achievements.html">Achievements</a><a href="about.html" class="active">About</a>
     </nav>
     <div class="nav-right">
-      <a href="https://portal.drdebracanapp.com" class="nav-portal"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-right:6px;"><rect x="2.5" y="5.5" width="7" height="5" rx="0.5" stroke="currentColor" stroke-width="1.1"></rect><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" stroke="currentColor" stroke-width="1.1"></path></svg>Portal login</a>
+      <a href="portal.html" class="nav-portal"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-right:6px;"><rect x="2.5" y="5.5" width="7" height="5" rx="0.5" stroke="currentColor" stroke-width="1.1"></rect><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" stroke="currentColor" stroke-width="1.1"></path></svg>Portal login</a>
       <span class="nav-divider" aria-hidden="true"></span>
       <a href="mailto:info@drdebracanapp.com" class="btn btn-sm">Contact</a>
     </div>
@@ -206,6 +221,35 @@
   </div>
 </section>
 
+<!-- ============ LEGACY — MOTHER & DAUGHTER ============ -->
+<section class="sec legacy" data-screen-label="Mother & Daughter">
+  <div class="container">
+    <div class="grid">
+      <div class="photo fx">
+        <img src="assets/debra-allyson.jpg" alt="Dr. Debra Canapp with her daughter Allyson" />
+        <div class="plate">
+          <div><div class="sig">Debra &amp; Allyson</div><div class="cap">Mother &amp; daughter</div></div>
+          <div class="no">Plate № 002</div>
+        </div>
+      </div>
+      <div class="copy">
+        <div class="kick fx"><span class="no">§ 05</span> A family practice</div>
+        <h2 class="lines" style="font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.6vw,56px);line-height:1.06;letter-spacing:-0.02em;margin:24px 0 0;max-width:720px;text-wrap:balance;">
+          <span class="ln"><span>Fifteen years —</span></span>
+          <span class="ln"><span><em style="font-style:italic;font-weight:300;color:var(--ink-2);">side by side.</em></span></span>
+        </h2>
+        <p class="fx d1">Behind the credentials is a family. For more than <em>fifteen years</em> I've worked alongside my mom in this field — watching her grow, learn, and become the extraordinary veterinarian she is today, and eventually helping bring her course to life for veterinarians around the world.</p>
+        <p class="fx d1">Bringing her U.S. course to life is one of the proudest things we've done together, and I continue to help her run it, support her students, and keep this practice moving forward.</p>
+        <p class="fx d1">Getting to do meaningful work beside your mom — for this long, in something you both love so much — is rare. We don't take a day of it for granted.</p>
+        <div class="signoff fx d2">
+          <div class="name">Allyson</div>
+          <div class="role">Daughter · Course &amp; practice partner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CLOSE ============ -->
 <section class="sec close" data-screen-label="About Close">
   <div class="container">
@@ -254,7 +298,7 @@
         <ul>
           <li><a href="mailto:info@drdebracanapp.com">info@drdebracanapp.com</a></li>
           <li style="margin-top:12px;"><a href="mailto:info@drdebracanapp.com">Send a message via the contact form</a></li>
-          <li style="margin-top:12px;"><a href="https://portal.drdebracanapp.com" style="color:var(--tan);">Referral portal · sign in →</a></li>
+          <li style="margin-top:12px;"><a href="portal.html" style="color:var(--tan);">Referral portal · sign in →</a></li>
         </ul>
       </div>
     </div>
