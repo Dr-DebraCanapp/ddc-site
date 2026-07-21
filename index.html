@@ -97,7 +97,7 @@ a:hover{color:var(--clay);}
 .hero .photo::after{content:'';position:absolute;inset:0;background:
   linear-gradient(90deg,rgba(244,239,229,1) 0%,rgba(244,239,229,0.55) 12%,rgba(244,239,229,0) 30%),
   linear-gradient(0deg,rgba(244,239,229,0.55) 0%,rgba(244,239,229,0) 26%);}
-@media (max-width:900px){.hero .photo{left:0;}}
+@media (max-width:900px){.hero{min-height:0;}.hero .photo{position:relative;left:0;height:44vh;}.hero .photo::after{background:linear-gradient(0deg,rgba(244,239,229,1) 0%,rgba(244,239,229,0) 26%);}.hero .inner{justify-content:flex-start;padding:34px clamp(24px,5vw,72px) 44px;}.hero h1{font-size:clamp(48px,13vw,74px);}.hero h1 .l2{padding-left:0;}.hero .lede{margin-top:22px;}.hero .ctas{margin-top:28px;}}
 .hero .inner{position:relative;z-index:3;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:60px clamp(24px,5vw,72px) 56px;}
 .hero .kick{color:var(--ink-3);}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(64px,10.5vw,190px);line-height:0.88;letter-spacing:-0.03em;margin:26px 0 0;}
@@ -108,7 +108,7 @@ a:hover{color:var(--clay);}
 .hero .foot .live{display:flex;align-items:center;gap:10px;}
 .hero .foot .live i{width:6px;height:6px;border-radius:50%;background:var(--clay);animation:blink 1.6s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.25;}}
-@media (max-width:900px){.hero .photo img{object-position:74% center;}}
+@media (max-width:900px){.hero .photo img{object-position:50% 22%;}}
 @media (prefers-reduced-motion:reduce){.hero .foot .live i{animation:none;}}
 
 /* ============ MARQUEE ============ */
@@ -223,7 +223,7 @@ footer a:hover{color:var(--tan);}
       <a href="index.html" class="active">Home</a><a href="services.html">Services</a><a href="course.html">Course</a><a href="network.html">Network</a><a href="lectures.html">Lectures</a><a href="achievements.html">Achievements</a><a href="about.html">About</a>
     </nav>
     <div class="nav-right">
-      <a href="https://portal.drdebracanapp.com" class="nav-portal"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-right:6px;"><rect x="2.5" y="5.5" width="7" height="5" rx="0.5" stroke="currentColor" stroke-width="1.1"></rect><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" stroke="currentColor" stroke-width="1.1"></path></svg>Portal login</a>
+      <a href="portal.html" class="nav-portal"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-right:6px;"><rect x="2.5" y="5.5" width="7" height="5" rx="0.5" stroke="currentColor" stroke-width="1.1"></rect><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" stroke="currentColor" stroke-width="1.1"></path></svg>Portal login</a>
       <span class="nav-divider" aria-hidden="true"></span>
       <a href="mailto:info@drdebracanapp.com" class="btn btn-sm">Contact</a>
     </div>
@@ -417,7 +417,7 @@ footer a:hover{color:var(--tan);}
         <ul>
           <li><a href="mailto:info@drdebracanapp.com">info@drdebracanapp.com</a></li>
           <li style="margin-top:12px;"><a href="#contact">Send a message via the contact form</a></li>
-          <li style="margin-top:12px;"><a href="https://portal.drdebracanapp.com" style="color:var(--tan);">Referral portal · sign in →</a></li>
+          <li style="margin-top:12px;"><a href="portal.html" style="color:var(--tan);">Referral portal · sign in →</a></li>
         </ul>
       </div>
     </div>
