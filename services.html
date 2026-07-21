@@ -596,5 +596,6 @@ footer a:hover{color:var(--tan);}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:0.15});
 document.querySelectorAll('.lines,.fx').forEach(el=>io.observe(el));
 </script>
+<script src="mobile-nav.js"></script>
 </body>
 </html>

@@ -85,7 +85,7 @@
       <a href="index.html">Home</a><a href="services.html">Services</a><a href="course.html">Course</a><a href="network.html">Network</a><a href="lectures.html">Lectures</a><a href="achievements.html">Achievements</a><a href="about.html" class="active">About</a>
     </nav>
     <div class="nav-right">
-      <a href="portal.html" class="nav-portal"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-right:6px;"><rect x="2.5" y="5.5" width="7" height="5" rx="0.5" stroke="currentColor" stroke-width="1.1"></rect><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" stroke="currentColor" stroke-width="1.1"></path></svg>Portal login</a>
+      <a href="https://portal.drdebracanapp.com" class="nav-portal"><svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true" style="margin-right:6px;"><rect x="2.5" y="5.5" width="7" height="5" rx="0.5" stroke="currentColor" stroke-width="1.1"></rect><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" stroke="currentColor" stroke-width="1.1"></path></svg>Portal login</a>
       <span class="nav-divider" aria-hidden="true"></span>
       <a href="mailto:info@drdebracanapp.com" class="btn btn-sm">Contact</a>
     </div>
@@ -298,7 +298,7 @@
         <ul>
           <li><a href="mailto:info@drdebracanapp.com">info@drdebracanapp.com</a></li>
           <li style="margin-top:12px;"><a href="mailto:info@drdebracanapp.com">Send a message via the contact form</a></li>
-          <li style="margin-top:12px;"><a href="portal.html" style="color:var(--tan);">Referral portal · sign in →</a></li>
+          <li style="margin-top:12px;"><a href="https://portal.drdebracanapp.com" style="color:var(--tan);">Referral portal · sign in →</a></li>
         </ul>
       </div>
     </div>
@@ -313,5 +313,6 @@
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:0.15});
 document.querySelectorAll('.lines,.fx').forEach(el=>io.observe(el));
 </script>
+<script src="mobile-nav.js"></script>
 </body>
 </html>
