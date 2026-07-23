@@ -465,3 +465,21 @@ registerI18n('zh', {
   "Please include": "请注明",
   "Show all 34 past engagements": "显示全部 34 场过往活动",
 });
+registerI18n('zh', {
+  "Elbow": "肘关节",
+  "Carpus": "腕关节",
+  "Carpi": "腕关节",
+  "Tarsus": "跗关节",
+  "Tarsi": "跗关节",
+  "Hock": "飞节（跗关节）",
+  "Hocks": "飞节（跗关节）",
+  "Shoulder OCD": "肩关节 OCD",
+  "Medial compartment": "内侧间室",
+  "Hyperextension": "过度伸展",
+  "Strain": "拉伤",
+  "Enthesopathy": "附着点病",
+  "Biceps": "肱二头肌",
+  "Common calcaneal (Achilles)": "总跟腱（跟腱）",
+  "Common calcanean": "总跟腱",
+  "Achilles / Common calcanean": "跟腱 / 总跟腱",
+});

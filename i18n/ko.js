@@ -465,3 +465,21 @@ registerI18n('ko', {
   "Please include": "다음을 포함해 주세요",
   "Show all 34 past engagements": "지난 활동 34건 모두 보기",
 });
+registerI18n('ko', {
+  "Elbow": "팔꿈치",
+  "Carpus": "손목(수근)",
+  "Carpi": "손목(수근)",
+  "Tarsus": "발목(족근)",
+  "Tarsi": "발목(족근)",
+  "Hock": "비절",
+  "Hocks": "비절",
+  "Shoulder OCD": "어깨 OCD",
+  "Medial compartment": "내측 구획",
+  "Hyperextension": "과신전",
+  "Strain": "근육 손상",
+  "Enthesopathy": "부착부병증",
+  "Biceps": "이두근",
+  "Common calcaneal (Achilles)": "총종골건(아킬레스)",
+  "Common calcanean": "총종골건",
+  "Achilles / Common calcanean": "아킬레스 / 총종골건",
+});

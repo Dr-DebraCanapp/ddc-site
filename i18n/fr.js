@@ -465,3 +465,21 @@ registerI18n('fr', {
   "Please include": "Merci d'indiquer",
   "Show all 34 past engagements": "Afficher les 34 interventions passées",
 });
+registerI18n('fr', {
+  "Elbow": "Coude",
+  "Carpus": "Carpe",
+  "Carpi": "Carpes",
+  "Tarsus": "Tarse",
+  "Tarsi": "Tarses",
+  "Hock": "Jarret",
+  "Hocks": "Jarrets",
+  "Shoulder OCD": "OCD de l'épaule",
+  "Medial compartment": "Compartiment médial",
+  "Hyperextension": "Hyperextension",
+  "Strain": "Élongation",
+  "Enthesopathy": "Enthésopathie",
+  "Biceps": "Biceps",
+  "Common calcaneal (Achilles)": "Calcanéen commun (Achille)",
+  "Common calcanean": "Calcanéen commun",
+  "Achilles / Common calcanean": "Achille / Calcanéen commun",
+});

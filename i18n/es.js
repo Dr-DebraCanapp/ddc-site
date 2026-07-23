@@ -476,3 +476,21 @@ registerI18n('es', {
   "Please include": "Incluye, por favor",
   "Show all 34 past engagements": "Ver los 34 compromisos anteriores",
 });
+registerI18n('es', {
+  "Elbow": "Codo",
+  "Carpus": "Carpo",
+  "Carpi": "Carpos",
+  "Tarsus": "Tarso",
+  "Tarsi": "Tarsos",
+  "Hock": "Corvejón",
+  "Hocks": "Corvejones",
+  "Shoulder OCD": "OCD de hombro",
+  "Medial compartment": "Compartimento medial",
+  "Hyperextension": "Hiperextensión",
+  "Strain": "Distensión",
+  "Enthesopathy": "Entesopatía",
+  "Biceps": "Bíceps",
+  "Common calcaneal (Achilles)": "Calcáneo común (Aquiles)",
+  "Common calcanean": "Calcáneo común",
+  "Achilles / Common calcanean": "Aquíleo / Calcáneo común",
+});

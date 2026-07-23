@@ -465,3 +465,21 @@ registerI18n('it', {
   "Please include": "Includi",
   "Show all 34 past engagements": "Mostra tutti i 34 interventi passati",
 });
+registerI18n('it', {
+  "Elbow": "Gomito",
+  "Carpus": "Carpo",
+  "Carpi": "Carpi",
+  "Tarsus": "Tarso",
+  "Tarsi": "Tarsi",
+  "Hock": "Garretto",
+  "Hocks": "Garretti",
+  "Shoulder OCD": "OCD della spalla",
+  "Medial compartment": "Compartimento mediale",
+  "Hyperextension": "Iperestensione",
+  "Strain": "Stiramento",
+  "Enthesopathy": "Entesopatia",
+  "Biceps": "Bicipite",
+  "Common calcaneal (Achilles)": "Calcaneare comune (Achille)",
+  "Common calcanean": "Calcaneare comune",
+  "Achilles / Common calcanean": "Achilleo / Calcaneare comune",
+});

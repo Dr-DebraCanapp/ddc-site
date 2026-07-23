@@ -465,3 +465,21 @@ registerI18n('de', {
   "Please include": "Bitte angeben",
   "Show all 34 past engagements": "Alle 34 vergangenen Auftritte anzeigen",
 });
+registerI18n('de', {
+  "Elbow": "Ellbogen",
+  "Carpus": "Karpus",
+  "Carpi": "Karpalgelenke",
+  "Tarsus": "Tarsus",
+  "Tarsi": "Sprunggelenke",
+  "Hock": "Sprunggelenk",
+  "Hocks": "Sprunggelenke",
+  "Shoulder OCD": "Schulter-OCD",
+  "Medial compartment": "Mediales Kompartiment",
+  "Hyperextension": "Hyperextension",
+  "Strain": "Zerrung",
+  "Enthesopathy": "Enthesopathie",
+  "Biceps": "Bizeps",
+  "Common calcaneal (Achilles)": "Gemeinsame Kalkaneussehne (Achilles)",
+  "Common calcanean": "Gemeinsame Kalkaneussehne",
+  "Achilles / Common calcanean": "Achilles / Gemeinsame Kalkaneussehne",
+});

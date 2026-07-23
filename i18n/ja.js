@@ -465,3 +465,21 @@ registerI18n('ja', {
   "Please include": "以下をご記入ください",
   "Show all 34 past engagements": "過去の登壇 34 件をすべて表示",
 });
+registerI18n('ja', {
+  "Elbow": "肘関節",
+  "Carpus": "手根",
+  "Carpi": "手根",
+  "Tarsus": "足根",
+  "Tarsi": "足根",
+  "Hock": "飛節",
+  "Hocks": "飛節",
+  "Shoulder OCD": "肩関節 OCD",
+  "Medial compartment": "内側コンパートメント",
+  "Hyperextension": "過伸展",
+  "Strain": "筋損傷",
+  "Enthesopathy": "付着部症",
+  "Biceps": "上腕二頭筋",
+  "Common calcaneal (Achilles)": "総踵（アキレス）",
+  "Common calcanean": "総踵",
+  "Achilles / Common calcanean": "アキレス／総踵",
+});
