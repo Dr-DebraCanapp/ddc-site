@@ -66,6 +66,7 @@ registerI18n('pt', {
   "Enroll": "Inscrever-se",
   "Send a message via the contact form": "Enviar uma mensagem pelo formulário de contato",
   "Referral portal · sign in →": "Portal de encaminhamentos · entrar →",
+  "Staff sign-in →": "Acesso da equipe →",
   "Diagnostic MSK Ultrasound": "Ultrassom musculoesquelético diagnóstico",
   "Sports Medicine": "Medicina esportiva",
   "Regenerative Guidance": "Orientação regenerativa",

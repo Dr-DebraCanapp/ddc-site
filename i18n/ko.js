@@ -66,6 +66,7 @@ registerI18n('ko', {
   "Enroll": "등록",
   "Send a message via the contact form": "문의 양식으로 메시지 보내기",
   "Referral portal · sign in →": "의뢰 포털 · 로그인 →",
+  "Staff sign-in →": "직원 로그인 →",
   "Diagnostic MSK Ultrasound": "근골격계 진단 초음파",
   "Sports Medicine": "스포츠 의학",
   "Regenerative Guidance": "재생 의학 지도",

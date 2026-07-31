@@ -76,6 +76,7 @@ registerI18n('es', {
   "Enroll": "Inscribirse",
   "Send a message via the contact form": "Enviar un mensaje mediante el formulario de contacto",
   "Referral portal · sign in →": "Portal de derivaciones · iniciar sesión →",
+  "Staff sign-in →": "Acceso del personal →",
   // marquee
   "Diagnostic MSK Ultrasound": "Ecografía musculoesquelética diagnóstica",
   "Sports Medicine": "Medicina deportiva",

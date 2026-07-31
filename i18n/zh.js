@@ -66,6 +66,7 @@ registerI18n('zh', {
   "Enroll": "报名",
   "Send a message via the contact form": "通过联系表单发送消息",
   "Referral portal · sign in →": "转诊门户 · 登录 →",
+  "Staff sign-in →": "员工登录 →",
   "Diagnostic MSK Ultrasound": "肌肉骨骼诊断超声",
   "Sports Medicine": "运动医学",
   "Regenerative Guidance": "再生医学指导",
