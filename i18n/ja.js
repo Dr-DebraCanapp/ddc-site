@@ -66,6 +66,7 @@ registerI18n('ja', {
   "Enroll": "登録する",
   "Send a message via the contact form": "お問い合わせフォームからメッセージを送る",
   "Referral portal · sign in →": "紹介ポータル · ログイン →",
+  "Hospital scheduling · sign in →": "病院スケジュール · ログイン →",
   "Staff sign-in →": "スタッフ ログイン →",
   "Diagnostic MSK Ultrasound": "筋骨格系診断超音波",
   "Sports Medicine": "スポーツ医学",

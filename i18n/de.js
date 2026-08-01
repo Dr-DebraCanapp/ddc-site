@@ -66,6 +66,7 @@ registerI18n('de', {
   "Enroll": "Anmelden",
   "Send a message via the contact form": "Nachricht über das Kontaktformular senden",
   "Referral portal · sign in →": "Überweisungsportal · anmelden →",
+  "Hospital scheduling · sign in →": "Klinik-Terminplanung · anmelden →",
   "Staff sign-in →": "Mitarbeiter-Login →",
   "Diagnostic MSK Ultrasound": "Diagnostischer muskuloskelettaler Ultraschall",
   "Sports Medicine": "Sportmedizin",
